@@ -1,0 +1,12 @@
+mysql_confi:
+  host: 211.66.130.46
+  user: root
+  passwd: 123456
+  db: apkmap
+  port: 3333
+  charset: utf8
+
+redis_confi:
+  host: 211.66.130.46
+  port: 12698
+  db: 0
