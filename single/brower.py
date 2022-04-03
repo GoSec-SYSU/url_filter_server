@@ -18,11 +18,18 @@ class Browser_Getter(object,):
     def __init__(self):
         path = os.path.join(os.getcwd(), 'browser', 'chromedriver.exe')
         options = webdriver.ChromeOptions()
-        options.add_argument("--headless")  # 设置火狐为headless无界面模式
+        options.add_argument("--headless")  # 设置为headless无界面模式
         options.add_argument("--disable-gpu")
         self.browser = webdriver.Chrome(executable_path=path, options=options)
+        self.browser.set_window_size(1280, 800)
 
     def get_brower(self):
+        # path = os.path.join(os.getcwd(), 'browser', 'chromedriver.exe')
+        # options = webdriver.ChromeOptions()
+        # options.add_argument("--headless")  # 设置为headless无界面模式
+        # options.add_argument("--disable-gpu")
+        # browser = webdriver.Chrome(executable_path=path, options=options)
+        # return browser
         return self.browser
 
 if __name__ == '__main__':

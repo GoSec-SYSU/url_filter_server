@@ -4,7 +4,7 @@ from selenium import webdriver
 import requests
 import lxml
 import re
-from same import CosineSimilarity
+from code_similarity import CosineSimilarity
 
 def sel_get(url, img_file):
     browser.get(url)
@@ -34,20 +34,26 @@ def write(file, content):
 if __name__ == '__main__':
     path = os.path.join(os.getcwd(), 'browser', 'chromedriver.exe')
     options = webdriver.ChromeOptions()
-    options.add_argument("--headless")  # 设置火狐为headless无界面模式
+    # options.add_argument("--headless")  # 设置火狐为headless无界面模式
     options.add_argument("--disable-gpu")
     browser = webdriver.Chrome(executable_path=path, options=options)
-    url = 'https://www.iqiyi.com/v_1pkjkyp9rvk.html'
+    # browser.maximize_window()
+    browser.set_window_size(1280, 800)
+    # url = 'https://w8.soulsmile.cn/activity/#/web/user?targetUserIdEcpt=NVhKUEpCaEFHbkZYRnBhV05La1orUT09&userIdEcpt=NVhKUEpCaEFHbkZYRnBhV05La1orUT09&shareUserId=aGlEbXFkMno5M3FodUl5MEpNOUVkQT09&titleNum=4&sec=yLkHkMErPVtu06KD9925BTpWQhMT37ka'
+    url = 'https://mp.iuynfg.com/app/trip/rx-trip-ticket/pages/detail?_fli_newpage=1&un_flutter=true&flutter_path=%2Fpoi_detail_page&_fli_unify=false&titleBarHidden=2&disableNav=YES&poiId=97&fsharettid=fliggysharesend.0000&__password=%EF%BF%A5IdYY2UUkbjb%EF%BF%A5&shareId=weixin_friend_card&_projVer=1.27.19'
     short_str = sel_get(url, 'files/short.jpg')
     print(short_str)
-    write(os.path.join(os.getcwd(), 'tmp', 'sel_short.html'), short_str)
-    print('--------------------------')
-    url = 'http://m.iqiyi.com/v_1pkjkyp9rvk.html?key=456ddd1ff52a6089c7e3f806d609520d&msrc=3_31_56&aid=8136869546987501&tvid=6265416625426700&cid=2&identifier=weixinv1&ftype=27&subtype=1&vip_pc=0&vip_tpc=1&isrd=1&p1=2_22_222&social_platform=link&_psc=9cbebf3693354fc0a7be79366b18ff3f'
-    ori_str = sel_get(url, 'files/ori.jpg')
-    print(ori_str)
-    write(os.path.join(os.getcwd(), 'tmp', 'sel_ori.html'), ori_str)
-    print('--------------------------')
+    # write(os.path.join(os.getcwd(), 'tmp', 'sel_short.html'), short_str)
+    # print('--------------------------')
+    #
+    # url = 'https://w8.soulsmile.cn/activity/#/web/user'
+    # # url = 'https://w8.soulsmile.cn/activity/#/web/user?targetUserIdEcpt=NVhKUEpCaEFHbkZYRnBhV05La1orUT09&userIdEcpt=NVhKUEpCaEFHbkZYRnBhV05La1orUT09&shareUserId=aGlEbXFkMno5M3FodUl5MEpNOUVkQT09&titleNum=4&sec=yLkHkMErPVtu06KD9925BTpWQhMT37ka'
+    #
+    # ori_str = sel_get(url, 'files/ori.jpg')
+    # print(ori_str)
+    # write(os.path.join(os.getcwd(), 'tmp', 'sel_ori.html'), ori_str)
+    # print('--------------------------')
 
-    similarity = CosineSimilarity(short_str, ori_str)
-    similarity = similarity.main()
-    print('相似度: %.2f%%' % (similarity * 100))
+    # similarity = CosineSimilarity(short_str, ori_str)
+    # similarity = similarity.main()
+    # print('相似度: %.2f%%' % (similarity * 100))

@@ -10,3 +10,18 @@ redis_confi:
   host: 211.66.130.46
   port: 12698
   db: 0
+
+# 代码相似度阈值
+code_threshold: 0.90
+# 截屏相似度阈值
+cv_threshold: 0.80
+# 截屏未达到阈值，但达到可以使用代码相似度的阈值，必须小于cv_threshold
+cv_can_code_threshold: 0.70
+# 最大迭代次数
+maximum_search_time: 1024
+# 可以进行网页文本ocr的最大文本长度，小于这个长度不进行检测
+can_ocr_word_check_word_length: 50
+# 截屏文本相似度阈值
+ocr_word_threshold: 0.40
+# 截屏文本未达到阈值，但达到可以使用代码相似度的阈值，ocr_word_threshold
+ocr_word_limit_threshold: 0.10

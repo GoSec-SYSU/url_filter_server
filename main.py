@@ -24,9 +24,9 @@ if __name__ == '__main__':
                     cur_app_name = row[2]
                     print(cur_app_name)
                     # worksheet.write(ro, co, cur_app_name)
-                    if database.is_exit(check_exist_by_app_name_sql.format(cur_app_name)):
-                        # 之前跑过不重跑！
-                        continue
+                    # if database.is_exit(check_exist_by_app_name_sql.format(cur_app_name)):
+                    #     # 之前跑过不重跑！
+                    #     continue
                     # database.query(delete_by_app_name_sql.format(cur_app_name))
                     co += 1
                 items = [row[7], row[10], row[13]]
