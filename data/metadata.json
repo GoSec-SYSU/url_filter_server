@@ -1,0 +1,40 @@
+{
+  "gosec.xpose_victim": {
+    "gosec.xpose_victim.MainActivity": {
+      "hello": [
+        [
+          "java.lang.String",
+          "java.lang.Integer",
+          "int",
+          "[C"
+        ],
+        [
+          "java.lang.String",
+          "java.lang.Integer",
+          "int",
+          "[C"
+        ]
+      ]
+    }
+  },
+  "com.ss.android.ugc.aweme": {
+    "android.content.ClipData": {
+      "newPlainText": [
+        [
+          "java.lang.CharSequence",
+          "java.lang.CharSequence"
+        ]
+      ]
+    }
+  },
+  "tv.danmaku.bili": {
+    "android.content.ClipData": {
+      "newPlainText": [
+        [
+          "java.lang.CharSequence",
+          "java.lang.CharSequence"
+        ]
+      ]
+    }
+  }
+}
