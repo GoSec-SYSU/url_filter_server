@@ -1,0 +1,53 @@
+app: tv.danmaku.bili
+# flowdroid's network sink
+# <java.net.URL: void set(java.lang.String,java.lang.String,int,java.lang.String,java.lang.String)> -> _SINK_
+# <java.net.URL: void set(java.lang.String,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)> -> _SINK_
+# <java.net.URLConnection: void setRequestProperty(java.lang.String,java.lang.String)> -> _SINK_
+
+# # SharedPreferences存储
+# <android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putBoolean(java.lang.String,boolean)> -> _SINK_
+# <android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putFloat(java.lang.String,float)> -> _SINK_
+# <android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putInt(java.lang.String,int)> -> _SINK_
+# <android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putLong(java.lang.String,long)> -> _SINK_
+# <android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)> -> _SINK_
+
+# # 文件存储
+# <java.io.Writer: void write(java.lang.String)> -> _SINK_
+# <java.io.Writer: void write(java.lang.String,int,int)> -> _SINK_
+
+# # sqlite存储
+# <android.database.sqlite.SQLiteDatabase: long insert(java.lang.String,java.lang.String,android.content.ContentValues)> -> _SINK_
+# <android.database.sqlite.SQLiteDatabase: long insertOrThrow(java.lang.String,java.lang.String,android.content.ContentValues)> -> _SINK_
+# <android.database.sqlite.SQLiteDatabase: long insertWithOnConflict(java.lang.String,java.lang.String,android.content.ContentValues,int)> -> _SINK_
+# <android.database.sqlite.SQLiteDatabase: int update(java.lang.String,android.content.ContentValues,java.lang.String,java.lang.String[])> -> _SINK_
+# <android.database.sqlite.SQLiteDatabase: int updateWithOnConflict(java.lang.String,android.content.ContentValues,java.lang.String,java.lang.String[],int)> -> _SINK_
+
+# # ContentProvider存储
+# <android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues)> -> _SINK_
+# <android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues,android.os.Bundle)> -> _SINK_
+# <android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,android.os.Bundle)> -> _SINK_
+# <android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[])> -> _SINK_
+
+# # 加密sink
+# Hooking javax.crypto.Cipher.doFinal(java.nio.ByteBuffer, java.nio.ByteBuffer)
+
+# <javax.crypto.Cipher: int doFinal(java.nio.ByteBuffer, java.nio.ByteBuffer)> -> _SINK_
+# <javax.crypto.Cipher: int doFinal(byte[],int)> -> _SINK_
+# <javax.crypto.Cipher: int doFinal(byte[],int,int,byte[])> -> _SINK_
+# <javax.crypto.Cipher: int doFinal(byte[],int,int,byte[],int)> -> _SINK_
+# <javax.crypto.Cipher: byte[] doFinal()> -> _SINK_
+# <javax.crypto.Cipher: byte[] doFinal(byte[])> -> _SINK_
+# <javax.crypto.Cipher: byte[] doFinal(byte[],int,int)> -> _SINK_
+# <javax.crypto.Cipher: javax.crypto.Cipher getInstance(java.lang.String)> -> _SINK_
+# <java.util.Base64: java.util.Base64 encodeToString(byte[])> -> _SINK_
+
+# 剪贴板
+<android.content.ClipData: java.lang.String newPlainText(java.lang.CharSequence,java.lang.CharSequence)> -> _SINK_
+
+
+app: com.ss.android.ugc.aweme
+<android.content.ClipData: java.lang.String newPlainText(java.lang.CharSequence,java.lang.CharSequence)> -> _SINK_
+# # flowdroid's network sink
+# <java.net.URL: void set(java.lang.String,java.lang.String,int,java.lang.String,java.lang.String)> -> _SINK_
+# <java.net.URL: void set(java.lang.String,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)> -> _SINK_
+# <java.net.URLConnection: void setRequestProperty(java.lang.String,java.lang.String)> -> _SINK_
