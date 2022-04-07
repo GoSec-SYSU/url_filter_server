@@ -17,6 +17,7 @@ def singleton(cls):
 class Browser_Getter(object,):
     def __init__(self):
         path = os.path.join(os.getcwd(), 'browser', 'chromedriver.exe')
+        print(path)
         options = webdriver.ChromeOptions()
         options.add_argument("--headless")  # 设置为headless无界面模式
         options.add_argument("--disable-gpu")

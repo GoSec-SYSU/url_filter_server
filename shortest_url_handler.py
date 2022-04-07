@@ -38,6 +38,7 @@ class Shortest_Url_Handler:
         self.search_time = 0
 
     def __init__(self, url):
+        # redis连接
         yaml_reader = Yaml_Reader()
         data = yaml_reader.get_data()
         self.r = redis.StrictRedis(host=data['redis_confi']['host'], port=data['redis_confi']['port'],
@@ -59,11 +60,6 @@ class Shortest_Url_Handler:
         self.arguments = arr[1:]
         self.redis_key = self.get_redis_key(self.domain, self.arguments)
         print('self.redis_key: ', self.redis_key)
-        # redis连接
-        yaml_reader = Yaml_Reader()
-        data = yaml_reader.get_data()
-        self.r = redis.StrictRedis(host=data['redis_confi']['host'], port=data['redis_confi']['port'],
-                                   db=data['redis_confi']['db'], decode_responses=True)
 
     # domain: https://www.baidu.com
     # arguments: ['name=xinxin', 'age=22', 'gender=male']
@@ -221,17 +217,17 @@ class Shortest_Url_Handler:
         flag, mes, ans = self.get_filted_url_by_redis()
         if flag:
             return mes, ans, 1.0
-        return self.get_shortest_url_main()
+        # return self.get_shortest_url_main()
         # 创建两个线程
-        # try:
-        #     _thread.start_new_thread(self.get_shortest_url_main, ())
-        # except:
-        #     print("Error: 无法启动线程")
-        # self.r.set(self.redis_key, 'pending')
-        # res_mes = '未有记录，直接返回'
-        # res_url = self.url
-        # res_similarity = 1.0
-        # return res_mes, res_url, res_similarity
+        try:
+            _thread.start_new_thread(self.get_shortest_url_main, ())
+        except:
+            print("Error: 无法启动线程")
+        self.r.set(self.redis_key, 'pending')
+        res_mes = '未有记录，直接返回'
+        res_url = self.url
+        res_similarity = 1.0
+        return res_mes, res_url, res_similarity
 
     def get_shortest_url_main(self):
         self.init()

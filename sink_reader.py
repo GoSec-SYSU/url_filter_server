@@ -2,6 +2,7 @@
 from typing import List
 import os
 
+
 def trans_standard_to_smail_form(str: str) -> str:
     # if 方法名是构造方法，则  <init> -> $init
     # if 类型不是数组类型： 直接返回
@@ -71,6 +72,7 @@ def handle_sink(sink_data: str) -> dict:
         # <okhttp3.Request: okhttp3.Request.Builder url(java.lang.String)> -> _SINK_
         d['targetClass'] = transform(items[0][1:len(items[0]) - 1])
         left_bracket_index = 0
+        # print('str: ', sink_data)
         while items[2][left_bracket_index] != '(':
             left_bracket_index += 1
         d['targetReturn'] = transform(items[1])
@@ -79,6 +81,7 @@ def handle_sink(sink_data: str) -> dict:
             items[2][left_bracket_index:len(items[2]) - 1])
     return d
 
+
 def read(url: str):
     sink_dict = dict()
     method_dict = dict()
@@ -86,22 +89,27 @@ def read(url: str):
     with open(url, encoding='utf-8') as f:
         line = f.readline()
         while line:
-            if line.startswith('app:'):
-                if cur_package_name != '':
-                    sink_dict[cur_package_name] = method_dict
-                cur_package_name = line.split(':')[1].strip()
-                method_dict = dict()
-            elif line.startswith('<') and cur_package_name != '':
-                data = handle_sink(line)
-                if data['targetClass'] not in method_dict:
-                    method_dict[data['targetClass']] = dict()
-                if data['targetMethod'] not in method_dict[data['targetClass']]:
-                    method_dict[data['targetClass']][data['targetMethod']] = []
-                method_dict[data['targetClass']][data['targetMethod']].append(data['targetArguments'])
-            line = f.readline()
+            try:
+                if line.startswith('app:'):
+                    if cur_package_name != '':
+                        sink_dict[cur_package_name] = method_dict
+                    cur_package_name = line.split(':')[1].strip()
+                    method_dict = dict()
+                elif line.startswith('<') and cur_package_name != '':
+                    data = handle_sink(line)
+                    if data['targetClass'] not in method_dict:
+                        method_dict[data['targetClass']] = dict()
+                    if data['targetMethod'] not in method_dict[data['targetClass']]:
+                        method_dict[data['targetClass']][data['targetMethod']] = []
+                    method_dict[data['targetClass']][data['targetMethod']].append(data['targetArguments'])
+            except Exception as e:
+                pass
+            finally:
+                line = f.readline()
     if cur_package_name != '':
         sink_dict[cur_package_name] = method_dict
     return sink_dict
+
 
 if __name__ == '__main__':
     data = read(os.path.join(os.path.dirname(__file__), 'files', 'base_sink.txt'))

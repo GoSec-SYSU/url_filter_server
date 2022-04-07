@@ -1,53 +1,908 @@
-app: tv.danmaku.bili
-# flowdroid's network sink
-# <java.net.URL: void set(java.lang.String,java.lang.String,int,java.lang.String,java.lang.String)> -> _SINK_
-# <java.net.URL: void set(java.lang.String,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)> -> _SINK_
-# <java.net.URLConnection: void setRequestProperty(java.lang.String,java.lang.String)> -> _SINK_
+# app: tv.danmaku.bili
+app: com.sankuai.meituan
+<javax.servlet.ServletRequest: java.lang.String getParameter(java.lang.String)> -> _SOURCE_
+<javax.persistence.EntityManager: javax.persistence.TypedQuery createQuery(java.lang.String,java.lang.Class)> -> _SINK_
+<javax.servlet.http.HttpServletResponse: void sendRedirect(java.lang.String)> -> _SINK_
+<java.io.File: boolean delete()> -> _SINK_
 
-# # SharedPreferences存储
-# <android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putBoolean(java.lang.String,boolean)> -> _SINK_
-# <android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putFloat(java.lang.String,float)> -> _SINK_
-# <android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putInt(java.lang.String,int)> -> _SINK_
-# <android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putLong(java.lang.String,long)> -> _SINK_
-# <android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)> -> _SINK_
+<org.apache.xalan.xsltc.runtime.BasisLibrary: java.lang.String replace(java.lang.String,java.lang.String,java.lang.String[])> -> _SINK_
+<org.springframework.mock.web.portlet.MockPortletRequest: void setParameters(java.util.Map)> -> _SINK_
+<org.apache.axis2.description.AxisService: void printWSDLError(java.io.OutputStream)> -> _SINK_
+<org.springframework.mock.web.portlet.MockPortletRequest: void setParameter(java.lang.String,java.lang.String)> -> _SINK_
+<org.apache.commons.lang3.text.StrSubstitutor: java.lang.String replace(char[])> -> _SINK_
+<org.apache.xmlrpc.webserver.XmlRpcServletServer: void setResponseHeader(org.apache.xmlrpc.common.ServerStreamConnection,java.lang.String,java.lang.String)> -> _SINK_
+<net.sourceforge.pebble.domain.Comment: void setAuthenticated(boolean)> -> _SINK_
+<java.lang.String: java.lang.String replaceFirst(java.lang.String,java.lang.String)> -> _SINK_
+<org.springframework.web.socket.server.support.WebSocketHttpRequestHandler: void handleRequest(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)> -> _SINK_
+<org.apache.xmlrpc.server.ReflectiveXmlRpcHandler: java.lang.Object execute(org.apache.xmlrpc.XmlRpcRequest)> -> _SINK_
+<com.mysql.jdbc.Statement: java.sql.ResultSet executeQuery(java.lang.String)> -> _SINK_
+<org.springframework.test.context.transaction.TransactionalTestExecutionListener: void runAfterTransactionMethods(org.springframework.test.context.TestContext)> -> _SINK_
+<org.springframework.web.servlet.tags.UrlTag: java.lang.String createUrl)> -> _SINK_
+<org.apache.xmlrpc.webserver.XmlRpcServlet: void log(java.lang.String)> -> _SINK_
+<org.apache.stratos.cli.StratosApplication: int run(java.lang.String[])> -> _SINK_
+<org.owasp.webgoat.session.ParameterParser: void update(javax.servlet.ServletRequest)> -> _SINK_
+<org.apache.commons.lang3.text.StrSubstitutor: java.lang.String replace(java.lang.CharSequence)> -> _SINK_
+<org.apache.xmlrpc.webserver.XmlRpcServletServer: void execute(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)> -> _SINK_
+<org.apache.xmlrpc.webserver.ServletOutputStreamImpl: void write(byte[],int,int)> -> _SINK_
+<org.apache.xmlrpc.webserver.ConnectionServer: void writeResponse(org.apache.xmlrpc.common.XmlRpcStreamRequestConfig,java.io.OutputStream,java.lang.Object)> -> _SINK_
+<org.apache.xmlrpc.webserver.Connection: void writeResponseHeader(org.apache.xmlrpc.webserver.RequestData,int)> -> _SINK_
+<org.apache.bcel.util.JavaWrapper: void runMain(java.lang.String,java.lang.String[])> -> _SINK_
+<org.springframework.format.datetime.joda.PeriodFormatter: java.lang.Object parse(java.lang.String,java.util.Locale)> -> _SINK_
+<org.apache.xerces.impl.xs.models.XSDFACM: void dumpTree(org.apache.xerces.impl.dtd.models.CMNode,int)> -> _SINK_
+<org.springframework.jdbc.core.JdbcTemplate: java.lang.Object query(java.lang.String,org.springframework.jdbc.core.ResultSetExtractor)> -> _SINK_
+<org.owasp.webgoat.session.DatabaseUtilities: java.sql.Connection getHsqldbConnection(java.lang.String,org.owasp.webgoat.session.WebgoatContext)> -> _SINK_
+<org.springframework.jdbc.core.JdbcTemplate: void execute(java.lang.String)> -> _SINK_
+<org.springframework.mock.web.MockBodyContent: void println(java.lang.String)> -> _SINK_
+<org.owasp.webgoat.HammerHead: void log(javax.servlet.http.HttpServletRequest,java.lang.String)> -> _SINK_
+<org.apache.xmlrpc.server.XmlRpcServerWorker: java.lang.Object execute(org.apache.xmlrpc.XmlRpcRequest)> -> _SINK_
+<org.owasp.webgoat.session.LessonSession: void setAuthenticated(boolean)> -> _SINK_
+<org.springframework.orm.hibernate3.support.ClobStringType: int[] sqlTypes)> -> _SINK_
+<org.owasp.webgoat.session.WebSession: void update(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String)> -> _SINK_
+<org.hibernate.validator.internal.util.ConcurrentReferenceHashMap: boolean replace(java.lang.Object,java.lang.Object,java.lang.Object)> -> _SINK_
+<org.apache.xmlrpc.webserver.WebServer: void setParanoid(boolean)> -> _SINK_
+<com.novell.ldap.rfc2251.RfcFilter: void addSubstring(int,byte[])> -> _SINK_
+<org.springframework.web.socket.sockjs.transport.session.WebSocketServerSockJsSession: void handleMessage(org.springframework.web.socket.TextMessage,org.springframework.web.socket.WebSocketSession)> -> _SINK_
+<org.xmldb.api.base.XMLDBException: void printStackTrace(java.io.PrintWriter)> -> _SINK_
+<org.springframework.web.socket.adapter.standard.StandardWebSocketSession: void sendTextMessage(org.springframework.web.socket.TextMessage)> -> _SINK_
+<org.apache.xerces.impl.xpath.regex.REUtil: void dumpString(java.lang.String)> -> _SINK_
+<org.apache.xalan.xsltc.compiler.util.Util: java.lang.String replace(java.lang.String,java.lang.String,java.lang.String[])> -> _SINK_
+<org.apache.http.impl.conn.DefaultClientConnection: void sendRequestHeader(org.apache.http.HttpRequest)> -> _SINK_
+<org.apache.commons.validator.util.ValidatorUtils: java.lang.String replace(java.lang.String,java.lang.String,java.lang.String)> -> _SINK_
+<com.google.json.JsonSanitizer: void replace(int,int,java.lang.String)> -> _SINK_
+<org.owasp.esapi.reference.validation.StringValidationRule: void addBlacklistPattern(java.util.regex.Pattern)> -> _SINK_
+<org.apache.commons.lang3.text.StrSubstitutor: java.lang.String replace(java.lang.CharSequence,int,int)> -> _SINK_
+<java.lang.String: java.lang.String replace(java.lang.CharSequence,java.lang.CharSequence)> -> _SINK_
+<org.hibernate.validator.internal.util.ConcurrentReferenceHashMap: java.lang.Object replace(java.lang.Object,java.lang.Object)> -> _SINK_
+<org.springframework.security.util.FieldUtils: void setProtectedFieldValue(java.lang.String,java.lang.Object,java.lang.Object)> -> _SINK_
+<org.springframework.mock.web.MockBodyContent: void println(char[])> -> _SINK_
+<org.springframework.test.context.junit4.SpringJUnit4ClassRunner: void runChild(org.junit.runners.model.FrameworkMethod,org.junit.runner.notification.RunNotifier)> -> _SINK_
+<org.springframework.web.socket.handler.ConcurrentWebSocketSessionDecorator: void sendMessage(org.springframework.web.socket.WebSocketMessage)> -> _SINK_
+<org.springframework.orm.hibernate3.TypeDefinitionBean: void setParameters(java.util.Properties)> -> _SINK_
+<org.springframework.format.datetime.joda.DateTimeParser: org.joda.time.DateTime parse(java.lang.String,java.util.Locale)> -> _SINK_
+%<java.lang.String: java.lang.String replaceAll(java.lang.String,java.lang.String)> -> _SINK_
+<org.apache.commons.io.HexDump: void dump(byte[],long,java.io.OutputStream,int)> -> _SINK_
+<org.springframework.mock.web.MockJspWriter: void println(java.lang.String)> -> _SINK_
+<org.apache.xalan.templates.ElemTemplateElement: org.w3c.dom.Node replaceChild(org.w3c.dom.Node,org.w3c.dom.Node)> -> _SINK_
+<org.springframework.web.socket.config.HandlersBeanDefinitionParser: org.springframework.beans.factory.config.BeanDefinition parse(org.w3c.dom.Element,org.springframework.beans.factory.xml.ParserContext)> -> _SINK_
+<com.github.scribejava.core.oauth.OAuth20Service: com.github.scribejava.core.model.OAuth2AccessToken sendAccessTokenRequestSync(com.github.scribejava.core.model.OAuthRequest)> -> _SINK_
+<com.github.scribejava.core.oauth.OAuth20Service: java.util.concurrent.Future sendAccessTokenRequestAsync(com.github.scribejava.core.model.OAuthRequestAsync,com.github.scribejava.core.model.OAuthAsyncRequestCallback)> -> _SINK_
+<org.apache.xmlrpc.client.XmlRpcClient: java.lang.Object execute(java.lang.String,java.lang.Object[])> -> _SINK_
+<java.lang.Runtime: java.lang.Process exec(java.lang.String)> -> _SINK_
+<org.apache.xpath.jaxp.XPathImpl: javax.xml.xpath.XPathExpression compile(java.lang.String)> -> _SINK_
+<org.jsoup.parser.Parser: org.jsoup.nodes.Document parse(java.lang.String,java.lang.String)> -> _SINK_
+<org.jsoup.nodes.Node: org.jsoup.nodes.Node before(java.lang.String)> -> _SINK_
+<org.jsoup.nodes.Node: org.jsoup.nodes.Node after(java.lang.String)> -> _SINK_
+<javax.servlet.http.HttpServletResponseWrapper: void sendRedirect(java.lang.String)> -> _SINK_
 
-# # 文件存储
-# <java.io.Writer: void write(java.lang.String)> -> _SINK_
-# <java.io.Writer: void write(java.lang.String,int,int)> -> _SINK_
+<org.springframework.security.config.http.CsrfBeanDefinitionParser: org.springframework.beans.factory.config.BeanDefinition getCsrfLogoutHandler)> -> _SOURCE_
+<org.springframework.security.config.authentication.CachingUserDetailsService: org.springframework.security.core.userdetails.UserDetails loadUserByUsername(java.lang.String)> -> _SOURCE_
+<org.springframework.security.core.userdetails.UserDetailsByNameServiceWrapper: org.springframework.security.core.userdetails.UserDetails loadUserDetails(org.springframework.security.core.Authentication)> -> _SOURCE_
+<java.io.File: java.io.File getAbsoluteFile)> -> _SOURCE_
+<org.apache.commons.jxpath.ri.parser.XPathParser: java.lang.String unescape(java.lang.String)> -> _SOURCE_
+<org.springframework.security.config.http.FormLoginBeanDefinitionParser: java.lang.String getLoginPage)> -> _SOURCE_
+<org.apache.xmlrpc.webserver.HttpServletRequestImpl: java.lang.String getRealPath(java.lang.String)> -> _SOURCE_
+<com.google.auth.oauth2.UserCredentials: java.lang.String getClientSecret)> -> _SOURCE_
+<org.springframework.web.servlet.tags.UrlTag: java.lang.String createQueryString(java.util.List,java.util.Set,boolean)> -> _SOURCE_
+<org.springframework.messaging.simp.stomp.StompDecoder: java.lang.String unescape(java.lang.String)> -> _SOURCE_
+<org.springframework.web.servlet.tags.UrlTag: java.lang.String createUrl)> -> _SOURCE_
+<java.io.File: java.io.File getCanonicalFile)> -> _SOURCE_
+<org.apache.commons.jxpath.ri.JXPathContextReferenceImpl: java.lang.Object getValue(java.lang.String)> -> _SOURCE_
+<org.apache.xmlrpc.webserver.RequestData: java.lang.String getMethod)> -> _SOURCE_
+<com.google.auth.oauth2.DefaultCredentialsProvider: com.google.auth.oauth2.GoogleCredentials getDefaultCredentials(com.google.api.client.http.HttpTransport)> -> _SOURCE_
+<org.jsoup.nodes.Entities: java.lang.String unescape(java.lang.String)> -> _SOURCE_
+<org.springframework.util.DefaultPropertiesPersister: java.lang.String unescape(java.lang.String)> -> _SOURCE_
+<org.owasp.webgoat.plugins.Plugin: void loadFiles(java.nio.file.Path)> -> _SOURCE_
+<org.apache.xmlrpc.webserver.HttpServletResponseImpl: java.lang.String getHeader(java.lang.String)> -> _SOURCE_
+<com.google.auth.oauth2.UserAuthorizer: com.google.auth.oauth2.UserCredentials getCredentialsFromCode(java.lang.String,java.net.URI)> -> _SOURCE_
+<org.dmfs.oauth2.client.http.requests.ResourceOwnerPasswordTokenRequest: org.dmfs.httpclient.HttpRequestEntity requestEntity)> -> _SOURCE_
+<org.owasp.webgoat.util.HtmlEncoder: java.lang.String decode(java.lang.String)> -> _SOURCE_
+<javax.naming.ldap.Rdn: java.lang.Object unescapeValue(java.lang.String)> -> _SOURCE_
+<org.apache.xmlrpc.webserver.XmlRpcServletServer: org.apache.xmlrpc.common.XmlRpcHttpRequestConfigImpl getConfig(javax.servlet.http.HttpServletRequest)> -> _SOURCE_
+<org.apache.xmlrpc.webserver.HttpServletRequestImpl: void parsePostData(java.util.Map,java.io.InputStream,java.lang.String)> -> _SOURCE_
+<org.springframework.security.concurrent.DelegatingSecurityContextExecutorService: java.util.concurrent.ExecutorService getDelegate)> -> _SOURCE_
+<org.springframework.security.config.annotation.web.builders.HttpSecurity: org.springframework.security.config.'annotation'.web.configurers.HeadersConfigurer headers)> -> _SOURCE_
+<org.springframework.web.servlet.tags.EscapeBodyTag: java.lang.String readBodyContent)> -> _SOURCE_
+<org.springframework.web.util.UrlPathHelper: java.lang.String decodeRequestString(javax.servlet.http.HttpServletRequest,java.lang.String)> -> _SOURCE_
+<org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder: org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder requestAttr(java.lang.String,java.lang.Object)> -> _SOURCE_
+<com.google.auth.oauth2.UserAuthorizer: com.google.auth.oauth2.UserCredentials getCredentials(java.lang.String)> -> _SOURCE_
+<org.springframework.web.socket.sockjs.transport.handler.JsonpReceivingTransportHandler: java.lang.String[] readMessages(org.springframework.http.server.ServerHttpRequest)> -> _SOURCE_
+<com.google.auth.oauth2.DefaultCredentialsProvider: com.google.auth.oauth2.GoogleCredentials getDefaultCredentialsUnsynchronized(com.google.api.client.http.HttpTransport)> -> _SOURCE_
+<org.springframework.security.config.http.FormLoginBeanDefinitionParser: java.lang.String getLoginProcessingUrl)> -> _SOURCE_
+<org.apache.xmlrpc.webserver.HttpServletRequestImpl: java.lang.String readLine(byte[])> -> _SOURCE_
+<org.springframework.security.config.http.LogoutBeanDefinitionParser: org.springframework.beans.factory.config.BeanDefinition getLogoutRequestMatcher(java.lang.String)> -> _SOURCE_
+<org.springframework.security.config.annotation.web.configurers.LogoutConfigurer: java.util.List getLogoutHandlers)> -> _SOURCE_
+<org.apache.xmlrpc.webserver.RequestData: java.lang.String getHttpVersion)> -> _SOURCE_
+<com.novell.ldap.rfc2251.RfcFilter: byte[] unescapeString(java.lang.String)> -> _SOURCE_
+<org.springframework.web.socket.config.HandlersBeanDefinitionParser: org.springframework.beans.factory.config.BeanDefinition parse(org.w3c.dom.Element,org.springframework.beans.factory.xml.ParserContext)> -> _SOURCE_
+<com.google.auth.oauth2.DefaultCredentialsProvider: java.io.File getWellKnownCredentialsFile)> -> _SOURCE_
+<org.apache.xmlrpc.webserver.HttpServletRequestImpl: void parseParameters)> -> _SOURCE_
+<org.jsoup.parser.Parser: org.jsoup.nodes.Document parse(java.lang.String,java.lang.String)> -> _SOURCE_
+<javax.servlet.ServletRequestWrapper: java.lang.String getParameter(java.lang.String)> -> _SOURCE_
 
-# # sqlite存储
-# <android.database.sqlite.SQLiteDatabase: long insert(java.lang.String,java.lang.String,android.content.ContentValues)> -> _SINK_
-# <android.database.sqlite.SQLiteDatabase: long insertOrThrow(java.lang.String,java.lang.String,android.content.ContentValues)> -> _SINK_
-# <android.database.sqlite.SQLiteDatabase: long insertWithOnConflict(java.lang.String,java.lang.String,android.content.ContentValues,int)> -> _SINK_
-# <android.database.sqlite.SQLiteDatabase: int update(java.lang.String,android.content.ContentValues,java.lang.String,java.lang.String[])> -> _SINK_
-# <android.database.sqlite.SQLiteDatabase: int updateWithOnConflict(java.lang.String,android.content.ContentValues,java.lang.String,java.lang.String[],int)> -> _SINK_
+<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()> -> _SOURCE_
+<org.apache.http.util.EntityUtils: java.lang.String toString(org.apache.http.HttpEntity)> -> _SOURCE_
+<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()> -> _SOURCE_
 
-# # ContentProvider存储
-# <android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues)> -> _SINK_
-# <android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues,android.os.Bundle)> -> _SINK_
-# <android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,android.os.Bundle)> -> _SINK_
-# <android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[])> -> _SINK_
+<android.location.Location: double getLatitude()> -> _SOURCE_
+<android.location.Location: double getLongitude()> -> _SOURCE_
+<android.location.LocationManager: android.location.Location getLastKnownLocation(java.lang.String)> -> _SOURCE_
 
-# # 加密sink
-# Hooking javax.crypto.Cipher.doFinal(java.nio.ByteBuffer, java.nio.ByteBuffer)
+<android.telephony.TelephonyManager: java.lang.String getDeviceId()> android.permission.READ_PHONE_STATE -> _SOURCE_
+<android.telephony.TelephonyManager: java.lang.String getSubscriberId()> android.permission.READ_PHONE_STATE -> _SOURCE_
+<android.telephony.TelephonyManager: java.lang.String getSimSerialNumber()> android.permission.READ_PHONE_STATE -> _SOURCE_
+<android.telephony.TelephonyManager: java.lang.String getLine1Number()> android.permission.READ_PHONE_STATE -> _SOURCE_
 
-# <javax.crypto.Cipher: int doFinal(java.nio.ByteBuffer, java.nio.ByteBuffer)> -> _SINK_
-# <javax.crypto.Cipher: int doFinal(byte[],int)> -> _SINK_
-# <javax.crypto.Cipher: int doFinal(byte[],int,int,byte[])> -> _SINK_
-# <javax.crypto.Cipher: int doFinal(byte[],int,int,byte[],int)> -> _SINK_
-# <javax.crypto.Cipher: byte[] doFinal()> -> _SINK_
-# <javax.crypto.Cipher: byte[] doFinal(byte[])> -> _SINK_
-# <javax.crypto.Cipher: byte[] doFinal(byte[],int,int)> -> _SINK_
-# <javax.crypto.Cipher: javax.crypto.Cipher getInstance(java.lang.String)> -> _SINK_
-# <java.util.Base64: java.util.Base64 encodeToString(byte[])> -> _SINK_
+<java.net.URLConnection: void connect()> -> _SINK_
+<java.net.URLConnection: java.io.InputStream getInputStream()> -> _BOTH_
+<java.net.URLConnection: java.io.OutputStream getOutputStream()> -> _SINK_
 
-# 剪贴板
+<java.net.URL: java.io.InputStream openStream()> -> _BOTH_
+<java.net.URL: java.lang.Object getContent()> -> _BOTH_
+<java.net.URL: java.lang.Object getContent(java.lang.Class[])> -> _BOTH_
+
+<java.net.URL: void set(java.lang.String,java.lang.String,int,java.lang.String,java.lang.String)> -> _SINK_
+<java.net.URL: void set(java.lang.String,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)> -> _SINK_
+
+<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()> -> _SOURCE_
+
+% Covered by the EasyTaintWrapper given that the HttpEntity is tainted
+%<org.apache.http.util.EntityUtils: java.lang.String toString(org.apache.http.HttpEntity)> -> _SOURCE_
+%<org.apache.http.util.EntityUtils: java.lang.String toString(org.apache.http.HttpEntity,java.lang.String)> -> _SOURCE_
+%<org.apache.http.util.EntityUtils: byte[] toByteArray(org.apache.http.HttpEntity)> -> _SOURCE_
+%<org.apache.http.util.EntityUtils: java.lang.String getContentCharSet(org.apache.http.HttpEntity)> -> _SOURCE_
+
+% add Activity.getIntent() as source instead of the next methods to avoid duplicate results.
+%<android.content.Intent: java.lang.String getAction()> -> _SOURCE_
+%<android.content.Intent: boolean[] getBooleanArrayExtra(java.lang.String)> -> _SOURCE_
+%<android.content.Intent: boolean getBooleanExtra(java.lang.String, boolean)> -> _SOURCE_
+%<android.content.Intent: android.os.Bundle getBundleExtra(java.lang.String)> -> _SOURCE_
+%<android.content.Intent: byte[] getByteArrayExtra(java.lang.String)> -> _SOURCE_
+%<android.content.Intent: byte getByteExtra(java.lang.String, byte)> -> _SOURCE_
+%<android.content.Intent: java.util.Set getCategories()> -> _SOURCE_
+%<android.content.Intent: char[] getCharArrayExtra(java.lang.String)> -> _SOURCE_
+%<android.content.Intent: char getCharExtra(java.lang.String, char)> -> _SOURCE_
+%<android.content.Intent: java.lang.CharSequence[] getCharSequenceArrayExtra(java.lang.String)> -> _SOURCE_
+%<android.content.Intent: java.util.ArrayList getCharSequenceArrayListExtra(java.lang.String)> -> _SOURCE_
+%<android.content.Intent: java.lang.CharSequence getCharSequenceExtra(java.lang.String)> -> _SOURCE_
+%<android.content.Intent: android.content.ClipData getClipData()> -> _SOURCE_
+%<android.content.Intent: android.content.ComponentName getComponent()> -> _SOURCE_
+%<android.content.Intent: android.net.Uri getData()> -> _SOURCE_
+%<android.content.Intent: java.lang.String getDataString()> -> _SOURCE_
+%<android.content.Intent: double[] getDoubleArrayExtra(java.lang.String)> -> _SOURCE_
+%<android.content.Intent: double getDoubleExtra(java.lang.String, double)> -> _SOURCE_
+%<android.content.Intent: android.os.Bundle getExtras()> -> _SOURCE_
+%<android.content.Intent: int getFlags()> -> _SOURCE_
+%<android.content.Intent: float[] getFloatArrayExtra(java.lang.String)> -> _SOURCE_
+%<android.content.Intent: float getFloatExtra(java.lang.String, float)> -> _SOURCE_
+%<android.content.Intent: int[] getIntArrayExtra(java.lang.String)> -> _SOURCE_
+%<android.content.Intent: java.util.ArrayList getIntegerArrayListExtra(java.lang.String)> -> _SOURCE_
+%<android.content.Intent: android.content.Intent getIntent(java.lang.String)> -> _SOURCE_
+%<android.content.Intent: android.content.Intent getIntentOld(java.lang.String)> -> _SOURCE_
+%<android.content.Intent: int getIntExtra(java.lang.String, int)> -> _SOURCE_
+%<android.content.Intent: long[] getLongArrayExtra(java.lang.String)> -> _SOURCE_
+%<android.content.Intent: long getLongExtra(java.lang.String, long)> -> _SOURCE_
+%<android.content.Intent: java.lang.String getPackage()> -> _SOURCE_
+%<android.content.Intent: android.os.Parcelable[] getParcelableArrayExtra(java.lang.String)> -> _SOURCE_
+%<android.content.Intent: java.util.ArrayList getParcelableArrayListExtra(java.lang.String)> -> _SOURCE_
+%<android.content.Intent: android.os.Parcelable getParcelableExtra(java.lang.String)> -> _SOURCE_
+%<android.content.Intent: java.lang.String getScheme()> -> _SOURCE_
+%<android.content.Intent: android.content.Intent getSelector()> -> _SOURCE_
+%<android.content.Intent: java.io.Serializable getSerializableExtra(java.lang.String)> -> _SOURCE_
+%<android.content.Intent: short[] getShortArrayExtra(java.lang.String)> -> _SOURCE_
+%<android.content.Intent: short getShortExtra(java.lang.String, short)> -> _SOURCE_
+%<android.content.Intent: android.graphics.Rect getSourceBounds()> -> _SOURCE_
+%<android.content.Intent: java.lang.String[] getStringArrayExtra(java.lang.String)> -> _SOURCE_
+%<android.content.Intent: java.util.ArrayList getStringArrayListExtra(java.lang.String)> -> _SOURCE_
+%<android.content.Intent: java.lang.String getStringExtra(java.lang.String)> -> _SOURCE_
+%<android.content.Intent: java.lang.String getType()> -> _SOURCE_
+
+%<android.content.Intent: void <init>()> -> _SOURCE_
+%<android.content.Intent: void <init>(android.content.Intent)> -> _SOURCE_
+%<android.content.Intent: void <init>(java.lang.String)> -> _SOURCE_
+%<android.content.Intent: void <init>(java.lang.String,android.net.Uri)> -> _SOURCE_
+%<android.content.Intent: void <init>(android.content.Context,java.lang.Class)> -> _SOURCE_
+%<android.content.Intent: void <init>(java.lang.String,android.net.Uri,android.content.Context,java.lang.Class)> -> _SOURCE_
+
+%bundle sources
+% do not consider them as sources, because we have the callback parameters from
+% which the apps obtain the bundles as sources anyway
+%<android.os.Bundle: java.lang.Object get(java.lang.String)> -> _SOURCE_
+%<android.os.Bundle: boolean getBoolean(java.lang.String)> -> _SOURCE_
+%<android.os.Bundle: boolean getBoolean(java.lang.String,boolean)> -> _SOURCE_
+%<android.os.Bundle: boolean[] getBooleanArray(java.lang.String)> -> _SOURCE_
+%<android.os.Bundle: android.os.Bundle getBundle(java.lang.String)> -> _SOURCE_
+%<android.os.Bundle: byte getByte(java.lang.String)> -> _SOURCE_
+%<android.os.Bundle: java.lang.Byte getByte(java.lang.String,byte)> -> _SOURCE_
+%<android.os.Bundle: byte[] getByteArray(java.lang.String)> -> _SOURCE_
+%<android.os.Bundle: char getChar(java.lang.String)> -> _SOURCE_
+%<android.os.Bundle: char getChar(java.lang.String,char)> -> _SOURCE_
+%<android.os.Bundle: char[] getCharArray(java.lang.String)> -> _SOURCE_
+%<android.os.Bundle: java.lang.CharSequence getCharSequence(java.lang.String,java.lang.CharSequence)> -> _SOURCE_
+%<android.os.Bundle: java.lang.CharSequence getCharSequence(java.lang.String)> -> _SOURCE_
+%<android.os.Bundle: java.lang.CharSequence[] getCharSequenceArray(java.lang.String)> -> _SOURCE_
+%<android.os.Bundle: java.util.ArrayList getCharSequenceArrayList(java.lang.String)> -> _SOURCE_
+%<android.os.Bundle: java.lang.ClassLoader getClassLoader()> -> _SOURCE_
+%<android.os.Bundle: double getDouble(java.lang.String)> -> _SOURCE_
+%<android.os.Bundle: double getDouble(java.lang.String,double)> -> _SOURCE_
+%<android.os.Bundle: double[] getDoubleArray(java.lang.String)> -> _SOURCE_
+%<android.os.Bundle: float getFloat(java.lang.String)> -> _SOURCE_
+%<android.os.Bundle: float getFloat(java.lang.String,float)> -> _SOURCE_
+%<android.os.Bundle: float[] getFloatArray(java.lang.String)> -> _SOURCE_
+%<android.os.Bundle: int getInt(java.lang.String,int)> -> _SOURCE_
+%<android.os.Bundle: int getInt(java.lang.String)> -> _SOURCE_
+%<android.os.Bundle: int[] getIntArray(java.lang.String)> -> _SOURCE_
+%<android.os.Bundle: java.util.ArrayList getIntegerArrayList(java.lang.String)> -> _SOURCE_
+%<android.os.Bundle: long getLong(java.lang.String)> -> _SOURCE_
+%<android.os.Bundle: long getLong(java.lang.String,long)> -> _SOURCE_
+%<android.os.Bundle: long[] getLongArray(java.lang.String)> -> _SOURCE_
+%<android.os.Bundle: android.os.Parcelable getParcelable(java.lang.String)> -> _SOURCE_
+%<android.os.Bundle: android.os.Parcelable[] getParcelableArray(java.lang.String)> -> _SOURCE_
+%<android.os.Bundle: java.util.ArrayList getParcelableArrayList(java.lang.String)> -> _SOURCE_
+%<android.os.Bundle: java.io.Serializable getSerializable(java.lang.String)> -> _SOURCE_
+%<android.os.Bundle: short getShort(java.lang.String)> -> _SOURCE_
+%<android.os.Bundle: short getShort(java.lang.String,short)> -> _SOURCE_
+%<android.os.Bundle: short[] getShortArray(java.lang.String)> -> _SOURCE_
+%<android.os.Bundle: android.util.SparseArray getSparseParcelableArray(java.lang.String)> -> _SOURCE_
+%<android.os.Bundle: java.lang.String getString(java.lang.String)> -> _SOURCE_
+%<android.os.Bundle: java.util.ArrayList getStringArrayList(java.lang.String key)> -> _SOURCE_
+
+%bundle sinks
+<android.os.Bundle: void putBinder(java.lang.String,android.os.IBinder)> -> _SINK_
+<android.os.Bundle: void putBoolean(java.lang.String,boolean)> -> _SINK_
+<android.os.Bundle: void putBooleanArray(java.lang.String,boolean[])> -> _SINK_
+<android.os.Bundle: void putBundle(java.lang.String,android.os.Bundle)> -> _SINK_
+<android.os.Bundle: void putByte(java.lang.String,byte)> -> _SINK_
+<android.os.Bundle: void putByteArray(java.lang.String,byte[])> -> _SINK_
+<android.os.Bundle: void putChar(java.lang.String,char)> -> _SINK_
+<android.os.Bundle: void putCharArray(java.lang.String,char[])> -> _SINK_
+<android.os.Bundle: void putCharSequence(java.lang.String,java.lang.CharSequence)> -> _SINK_
+<android.os.Bundle: void putCharSequenceArray(java.lang.String,java.lang.CharSequence[])> -> _SINK_
+<android.os.Bundle: void putCharSequenceArrayList(java.lang.String,java.util.ArrayList)> -> _SINK_
+<android.os.Bundle: void putDouble(java.lang.String,double)> -> _SINK_
+<android.os.Bundle: void putDoubleArray(java.lang.String,double[])> -> _SINK_
+<android.os.Bundle: void putFloat(java.lang.String,float)> -> _SINK_
+<android.os.Bundle: void putFloatArray(java.lang.String,float[])> -> _SINK_
+<android.os.Bundle: void putInt(java.lang.String,int)> -> _SINK_
+<android.os.Bundle: void putIntArray(java.lang.String,int[])> -> _SINK_
+<android.os.Bundle: void putIntegerArrayList(java.lang.String,java.util.ArrayList)> -> _SINK_
+<android.os.Bundle: void putLong(java.lang.String,long)> -> _SINK_
+<android.os.Bundle: void putLongArray(java.lang.String,long[])> -> _SINK_
+<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)> -> _SINK_
+<android.os.Bundle: void putParcelableArray(java.lang.String,android.os.Parcelable[])> -> _SINK_
+<android.os.Bundle: void putParcelableArrayList(java.lang.String,java.util.ArrayList)> -> _SINK_
+<android.os.Bundle: void putSerializable(java.lang.String,java.io.Serializable)> -> _SINK_
+<android.os.Bundle: void putShort(java.lang.String,short)> -> _SINK_
+<android.os.Bundle: void putShortArray(java.lang.String,short[])> -> _SINK_
+<android.os.Bundle: void putSparseParcelableArray(java.lang.String,android.util.SparseArray)> -> _SINK_
+<android.os.Bundle: void putString(java.lang.String,java.lang.String)> -> _SINK_
+<android.os.Bundle: void putStringArray(java.lang.String,java.lang.String[])> -> _SINK_
+<android.os.Bundle: void putStringArrayList(java.lang.String,java.util.ArrayList)> -> _SINK_
+<android.os.Bundle: void putAll(android.os.Bundle)> -> _SINK_
+
+<android.media.AudioRecord: int read(short[],int,int)> -> _SOURCE_
+<android.media.AudioRecord: int read(byte[],int,int)> -> _SOURCE_
+<android.media.AudioRecord: int read(java.nio.ByteBuffer,int)> -> _SOURCE_
+<android.content.pm.PackageManager: java.util.List getInstalledApplications(int)> -> _SOURCE_
+<android.content.pm.PackageManager: java.util.List getInstalledPackages(int)> -> _SOURCE_
+<android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)> -> _SOURCE_
+<android.content.pm.PackageManager: java.util.List queryIntentServices(android.content.Intent,int)> -> _SOURCE_
+<android.content.pm.PackageManager: java.util.List queryBroadcastReceivers(android.content.Intent,int)> -> _SOURCE_
+<android.content.pm.PackageManager: java.util.List queryContentProviders(java.lang.String,int,int)> -> _SOURCE_
+
+<android.util.Log: int d(java.lang.String,java.lang.String)> -> _SINK_
+<android.util.Log: int d(java.lang.String,java.lang.String,java.lang.Throwable)> -> _SINK_
+<android.util.Log: int e(java.lang.String,java.lang.String)> -> _SINK_
+<android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)> -> _SINK_
+<android.util.Log: int i(java.lang.String,java.lang.String)> -> _SINK_
+<android.util.Log: int i(java.lang.String,java.lang.String,java.lang.Throwable)> -> _SINK_
+<android.util.Log: int v(java.lang.String,java.lang.String)> -> _SINK_
+<android.util.Log: int v(java.lang.String,java.lang.String,java.lang.Throwable)> -> _SINK_
+<android.util.Log: int w(java.lang.String,java.lang.Throwable)> -> _SINK_
+<android.util.Log: int w(java.lang.String,java.lang.String)> -> _SINK_
+<android.util.Log: int w(java.lang.String,java.lang.String,java.lang.Throwable)> -> _SINK_
+<android.util.Log: int wtf(java.lang.String,java.lang.Throwable)> -> _SINK_
+<android.util.Log: int wtf(java.lang.String,java.lang.String)> -> _SINK_
+<android.util.Log: int wtf(java.lang.String,java.lang.String,java.lang.Throwable)> -> _SINK_
+
+<java.io.OutputStream: void write(byte[])> -> _SINK_
+<java.io.OutputStream: void write(byte[],int,int)> -> _SINK_
+<java.io.OutputStream: void write(int)> -> _SINK_
+
+<java.io.FileOutputStream: void write(byte[])> -> _SINK_
+<java.io.FileOutputStream: void write(byte[],int,int)> -> _SINK_
+<java.io.FileOutputStream: void write(int)> -> _SINK_
+
+<java.io.Writer: void write(char[])> -> _SINK_
+<java.io.Writer: void write(char[],int,int)> -> _SINK_
+<java.io.Writer: void write(int)> -> _SINK_
+<java.io.Writer: void write(java.lang.String)> -> _SINK_
+<java.io.Writer: void write(java.lang.String,int,int)> -> _SINK_
+<java.io.Writer: java.io.Writer append(java.lang.CharSequence)> -> _SINK_
+
+<java.io.OutputStreamWriter: java.io.Writer append(java.lang.CharSequence)> -> _SINK_
+
+<android.content.Intent: android.content.Intent setAction(java.lang.String)> -> _SINK_
+<android.content.Intent: android.content.Intent setClassName(android.content.Context,java.lang.Class)> -> _SINK_
+<android.content.Intent: android.content.Intent setClassName(android.content.Context,java.lang.String)> -> _SINK_
+<android.content.Intent: android.content.Intent setComponent(android.content.ComponentName)> -> _SINK_
+
+%<android.content.Intent: android.content.Intent putExtra(java.lang.String,double[])> -> _SINK_
+%<android.content.Intent: android.content.Intent putExtra(java.lang.String,int)> -> _SINK_
+%<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.CharSequence)> -> _SINK_
+%<android.content.Intent: android.content.Intent putExtra(java.lang.String,char)> -> _SINK_
+%<android.content.Intent: android.content.Intent putExtra(java.lang.String,android.os.Bundle)> -> _SINK_
+%<android.content.Intent: android.content.Intent putExtra(java.lang.String,android.os.Parcelable[])> -> _SINK_
+%<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.io.Serializable)> -> _SINK_
+%<android.content.Intent: android.content.Intent putExtra(java.lang.String,int[])> -> _SINK_
+%<android.content.Intent: android.content.Intent putExtra(java.lang.String,float)> -> _SINK_
+%<android.content.Intent: android.content.Intent putExtra(java.lang.String,byte[])> -> _SINK_
+%<android.content.Intent: android.content.Intent putExtra(java.lang.String,long[])> -> _SINK_
+%<android.content.Intent: android.content.Intent putExtra(java.lang.String,android.os.Parcelable)> -> _SINK_
+%<android.content.Intent: android.content.Intent putExtra(java.lang.String,float[])> -> _SINK_
+%<android.content.Intent: android.content.Intent putExtra(java.lang.String,long)> -> _SINK_
+%<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String[])> -> _SINK_
+%<android.content.Intent: android.content.Intent putExtra(java.lang.String,boolean)> -> _SINK_
+%<android.content.Intent: android.content.Intent putExtra(java.lang.String,boolean[])> -> _SINK_
+%<android.content.Intent: android.content.Intent putExtra(java.lang.String,short)> -> _SINK_
+%<android.content.Intent: android.content.Intent putExtra(java.lang.String,double)> -> _SINK_
+%<android.content.Intent: android.content.Intent putExtra(java.lang.String,short[])> -> _SINK_
+%<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.String)> -> _SINK_
+%<android.content.Intent: android.content.Intent putExtra(java.lang.String,byte)> -> _SINK_
+%<android.content.Intent: android.content.Intent putExtra(java.lang.String,char[])> -> _SINK_
+%<android.content.Intent: android.content.Intent putExtra(java.lang.String,java.lang.CharSequence[])> -> _SINK_
+
+<android.content.Context: void sendBroadcast(android.content.Intent)> -> _SINK_
+<android.content.Context: void sendBroadcast(android.content.Intent,java.lang.String)> -> _SINK_
+<android.content.Context: void sendOrderedBroadcast(android.content.Intent,java.lang.String)> -> _SINK_
+
+<android.content.ContextWrapper: void sendOrderedBroadcast(android.content.Intent,java.lang.String)> -> _SINK_
+
+<android.media.MediaRecorder: void setVideoSource(int)> -> _SINK_
+<android.media.MediaRecorder: void setPreviewDisplay(android.view.Surface)> -> _SINK_
+<android.media.MediaRecorder: void start()> -> _SINK_
+
+<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)> -> _SINK_
+<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter,java.lang.String,android.os.Handler)> -> _SINK_
+
+<android.content.IntentFilter: void addAction(java.lang.String)> -> _SINK_
+<android.telephony.SmsManager: void sendTextMessage(java.lang.String,java.lang.String,java.lang.String,android.app.PendingIntent,android.app.PendingIntent)> android.permission.SEND_SMS -> _SINK_
+<android.telephony.SmsManager: void sendDataMessage(java.lang.String,java.lang.String,short,byte[],android.app.PendingIntent,android.app.PendingIntent)> android.permission.SEND_SMS -> _SINK_
+<android.telephony.SmsManager: void sendMultipartTextMessage(java.lang.String,java.lang.String,java.util.ArrayList,java.util.ArrayList,java.util.ArrayList)> android.permission.SEND_SMS -> _SINK_
+<java.net.Socket: void connect(java.net.SocketAddress)> -> _SINK_
+<android.os.Handler: boolean sendMessage(android.os.Message)> -> _SINK_
+
+<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putBoolean(java.lang.String,boolean)> -> _SINK_
+<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putFloat(java.lang.String,float)> -> _SINK_
+<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putInt(java.lang.String,int)> -> _SINK_
+<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putLong(java.lang.String,long)> -> _SINK_
+<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)> -> _SINK_
+
+<android.content.SharedPreferences: android.content.SharedPreferences getDefaultSharedPreferences(android.content.Context)> -> _SOURCE_
+
+
+<android.bluetooth.BluetoothAdapter: java.lang.String getAddress()> -> _SOURCE_
+<android.net.wifi.WifiInfo: java.lang.String getMacAddress()> -> _SOURCE_
+<java.util.Locale: java.lang.String getCountry()> -> _SOURCE_
+<android.net.wifi.WifiInfo: java.lang.String getSSID()> -> _SOURCE_
+<android.telephony.gsm.GsmCellLocation: int getCid()> -> _SOURCE_
+<android.telephony.gsm.GsmCellLocation: int getLac()> -> _SOURCE_
+
+<android.accounts.AccountManager: android.accounts.Account[] getAccounts()> -> _SOURCE_
+<java.util.Calendar: java.util.TimeZone getTimeZone()> -> _SOURCE_
+<android.provider.Browser: android.database.Cursor getAllBookmarks()> -> _SOURCE_
+<android.provider.Browser: android.database.Cursor getAllVisitedUrls()> -> _SOURCE_
+
+<org.apache.http.impl.client.DefaultHttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)> -> _SINK_
+<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)> -> _SINK_
+
+<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)> -> _SOURCE_
+<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal)> -> _SOURCE_
+
+% This is handled by the Easy Taint Wrapper given that the URL is used afterwards
+%<java.net.URL: void <init>(java.lang.String,java.lang.String,int,java.lang.String)> -> _SINK_
+%<java.net.URL: void <init>(java.lang.String,java.lang.String,java.lang.String)> -> _SINK_
+%<java.net.URL: void <init>(java.lang.String,java.lang.String,int,java.lang.String,java.net.URLStreamHandler)> -> _SINK_
+%<java.net.URL: void <init>(java.lang.String)> -> _SINK_
+%<java.net.URL: void <init>(java.net.URL,java.lang.String)> -> _SINK_
+%<java.net.URL: void <init>(java.net.URL,java.lang.String,java.net.URLStreamHandler)> -> _SINK_
+
+%<android.content.Context: void startActivity(android.content.Intent)> -> _SINK_
+%<android.content.ContextWrapper: void startActivity(android.content.Intent)> -> _SINK_
+%<android.content.Context: void startActivity(android.content.Intent,android.os.Bundle)> -> _SINK_
+<android.content.Context: void startActivities(android.content.Intent[])> -> _SINK_
+<android.content.Context: void startActivities(android.content.Intent[],android.os.Bundle)> -> _SINK_
+<android.content.Context: android.content.ComponentName startService(android.content.Intent)> -> _SINK_
+<android.content.Context: boolean bindService(android.content.Intent,android.content.ServiceConnection,int)> -> _SINK_
+<android.content.Context: void sendBroadcast(android.content.Intent)> -> _SINK_
+<android.content.Context: void sendBroadcast(android.content.Intent,java.lang.String)> -> _SINK_
+
+%<android.app.Activity: android.content.Intent getIntent()> -> _SOURCE_
+
+<android.app.Activity: void setResult(int,android.content.Intent)> -> _SINK_
+
+% Do not enter this method as a source. Our callback parameter handling will take care
+% of the parameters of this method anyway. Adding this method taints the whole activity!
+% <android.app.Activity: void onActivityResult(int,int,android.content.Intent)> -> _SOURCE_
+
+%<android.app.Activity: void startActivity(android.content.Intent)> -> _SINK_
+%<android.app.Activity: void startActivity(android.content.Intent,android.os.Bundle)> -> _SINK_
+<android.app.Activity: void startActivities(android.content.Intent[])> -> _SINK_
+<android.app.Activity: void startActivities(android.content.Intent[],android.os.Bundle)> -> _SINK_
+<android.app.Activity: void startActivityForResult(android.content.Intent,int)> -> _SINK_
+<android.app.Activity: void startActivityForResult(android.content.Intent,int,android.os.Bundle)> -> _SINK_
+<android.app.Activity: void startActivityFromChild(android.app.Activity,android.content.Intent,int,android.os.Bundle)> -> _SINK_
+<android.app.Activity: void startActivityFromChild(android.app.Activity,android.content.Intent,int)> -> _SINK_
+<android.app.Activity: void startActivityFromFragment(android.app.Fragment,android.content.Intent,int,android.os.Bundle)> -> _SINK_
+<android.app.Activity: void startActivityFromFragment(android.app.Fragment,android.content.Intent,int)> -> _SINK_
+<android.app.Activity: void startActivityIfNeeded(android.content.Intent,int,android.os.Bundle)> -> _SINK_
+<android.app.Activity: void startActivityIfNeeded(android.content.Intent,int)> -> _SINK_
+<android.app.Activity: android.content.ComponentName startService(android.content.Intent)> -> _SINK_
+<android.app.Activity: boolean bindService(android.content.Intent,android.content.ServiceConnection,int)> -> _SINK_
+<android.app.Activity: void sendBroadcast(android.content.Intent)> -> _SINK_
+<android.app.Activity: void sendBroadcast(android.content.Intent,java.lang.String)> -> _SINK_
+<android.app.Activity: void sendBroadcastAsUser(android.content.Intent,android.os.UserHandle)> -> _SINK_
+<android.app.Activity: void sendBroadcastAsUser(android.content.Intent,android.os.UserHandle,java.lang.String)> -> _SINK_
+<android.app.Activity: void sendOrderedBroadcast(android.content.Intent,java.lang.String,android.content.BroadcastReceiver,android.os.Handler,int,java.lang.String,android.os.Bundle)> -> _SINK_
+<android.app.Activity: void sendOrderedBroadcast(android.content.Intent,java.lang.String)> -> _SINK_
+<android.app.Activity: void sendOrderedBroadcastAsUser(android.content.Intent,android.os.UserHandle,java.lang.String,android.content.BroadcastReceiver,android.os.Handler,int,java.lang.String,android.os.Bundle)> -> _SINK_
+<android.app.Activity: void sendStickyBroadcast(android.content.Intent)> -> _SINK_
+<android.app.Activity: void sendStickyBroadcastAsUser(android.content.Intent,android.os.UserHandle)> -> _SINK_
+<android.app.Activity: void sendStickyOrderedBroadcast(android.content.Intent,android.content.BroadcastReceiver,android.os.Handler,int,java.lang.String,android.os.Bundle)> -> _SINK_
+<android.app.Activity: void sendStickyOrderedBroadcastAsUser(android.content.Intent,android.os.UserHandle,android.content.BroadcastReceiver,android.os.Handler,int,java.lang.String,android.os.Bundle)> -> _SINK_
+
+<android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues)> -> _SINK_
+<android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[])> -> _SINK_
+<android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[])> -> _SINK_
+<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)> -> _SINK_
+<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal)> -> _SINK_
+
+% <android.app.Activity: android.view.View findViewById(int)> -> _SOURCE_
+<android.database.Cursor: java.lang.String getString(int)> -> _SOURCE_
+<android.database.sqlite.SQLiteDatabase: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)> -> _SOURCE_
+<android.database.sqlite.SQLiteDatabase: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String,android.os.CancellationSignal)> -> _SOURCE_
+
+<java.lang.ProcessBuilder: java.lang.Process start()> -> _SINK_
 <android.content.ClipData: java.lang.String newPlainText(java.lang.CharSequence,java.lang.CharSequence)> -> _SINK_
 
-
-app: com.ss.android.ugc.aweme
+app: com.sankuai.meituan
 <android.content.ClipData: java.lang.String newPlainText(java.lang.CharSequence,java.lang.CharSequence)> -> _SINK_
-# # flowdroid's network sink
-# <java.net.URL: void set(java.lang.String,java.lang.String,int,java.lang.String,java.lang.String)> -> _SINK_
-# <java.net.URL: void set(java.lang.String,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)> -> _SINK_
-# <java.net.URLConnection: void setRequestProperty(java.lang.String,java.lang.String)> -> _SINK_
+
+app: com.qiyi.video
+<android.content.ClipData: java.lang.String newPlainText(java.lang.CharSequence,java.lang.CharSequence)> -> _SINK_
+<com.sijla.d.b: java.lang.String b(java.lang.String,java.lang.String)> -> _SINK_
+<com.meizu.cloud.pushsdk.util.c: byte[] a(java.security.PublicKey,byte[])> -> _SINK_
+<com.cmic.sso.sdk.d.i: java.lang.String a(byte[])> -> _SINK_
+<com.cmic.sso.sdk.d.i: java.lang.String b(byte[])> -> _SINK_
+<com.huawei.hms.hatool.e: byte[] a(byte[],java.security.PublicKey)> -> _SINK_
+<com.ta.utdid2.a.a.a: byte[] b(byte[],byte[])> -> _SINK_
+<com.alipay.sdk.encrypt.b: java.lang.String a(int,java.lang.String,java.lang.String)> -> _SINK_
+<com.baidu.speech.utils.DeviceId: byte[] decryptByPublicKey(byte[],java.security.PublicKey)> -> _SINK_
+<com.alibaba.ha.bizerrorreporter.a.a: byte[] a(java.lang.String,java.lang.String)> -> _SINK_
+<com.tencent.open.utils.d: java.lang.String b(java.lang.String,java.lang.String,byte[])> -> _SINK_
+<com.tencent.open.utils.d: java.lang.String a(java.lang.String,java.lang.String)> -> _SINK_
+<com.baidu.speech.utils.AESUtil: byte[] decrypt(java.lang.String,java.lang.String,byte[])> -> _SINK_
+<com.baidu.speech.utils.AESUtil: byte[] encrypt(java.lang.String,java.lang.String,byte[])> -> _SINK_
+<com.vivo.push.util.a: java.lang.String a(java.lang.String)> -> _SINK_
+<com.meizu.cloud.pushsdk.a.a.a: void h()> -> _SINK_
+<com.meizu.cloud.pushsdk.a.a.a: byte[] a(byte[])> -> _SINK_
+<com.umeng.commonsdk.statistics.common.DataHelper: byte[] decrypt(byte[],byte[])> -> _SINK_
+<com.vivo.push.util.f: byte[] a(java.lang.String,java.lang.String,byte[])> -> _SINK_
+<org.grtc.AesUtil: java.lang.String decrypt2(java.lang.String,java.lang.String)> -> _SINK_
+<org.grtc.AesUtil: java.lang.String decrypt2(java.lang.String,java.lang.String)> -> _SINK_
+<com.cmic.sso.sdk.d.a: java.lang.String b(byte[],java.lang.String)> -> _SINK_
+<com.huawei.secure.android.common.encrypt.keystore.aes.AesGcmKS: byte[] encrypt(javax.crypto.SecretKey,byte[])> -> _SINK_
+<org.cybergarage.util.AESUtil: byte[] encryptToBytes(java.lang.String,java.lang.String)> -> _SINK_
+<com.alibaba.motu.crashreporter.b.a: byte[] a(java.lang.String,java.lang.String)> -> _SINK_
+<com.tendcloud.tenddata.bl: byte[] b(byte[],java.lang.String)> -> _SINK_
+<com.tendcloud.tenddata.ba: byte[] b(byte[],byte[])> -> _SINK_
+<com.tencent.open.utils.d: java.lang.String a(java.lang.String,java.lang.String,byte[])> -> _SINK_
+<com.tencent.bugly.imsdk.proguard.ae: byte[] b(byte[])> -> _SINK_
+<com.tencent.bugly.imsdk.proguard.ad: byte[] b(byte[])> -> _SINK_
+<com.tencent.bugly.imsdk.proguard.ae: byte[] a(byte[])> -> _SINK_
+<com.tencent.bugly.imsdk.proguard.ad: byte[] a(byte[])> -> _SINK_
+<com.huawei.secure.android.common.encrypt.aes.AesCbc: byte[] decrypt(byte[],byte[],byte[])> -> _SINK_
+<cn.com.chinatelecom.gateway.lib.a.d: byte[] a(java.security.interfaces.RSAPublicKey,byte[])> -> _SINK_
+<com.cmic.sso.sdk.d.a: java.lang.String a(byte[],java.lang.String)> -> _SINK_
+<com.cmic.sso.sdk.d.b: byte[] b(android.content.Context)> -> _SINK_
+<com.cmic.sso.sdk.d.b: byte[] b(android.content.Context)> -> _SINK_
+<com.iqiyi.psdk.base.internal.PBAES: java.lang.String encrypt(java.lang.String)> -> _SINK_
+<com.alibaba.sdk.android.emas.f: byte[] a(java.lang.String,java.lang.String)> -> _SINK_
+<com.alibaba.sdk.android.emas.f: java.lang.String a(byte[],java.lang.String)> -> _SINK_
+<com.tencent.bugly.imsdk.proguard.y: byte[] a(int,byte[],byte[])> -> _SINK_
+<com.tencent.bugly.imsdk.proguard.y: byte[] b(int,byte[],byte[])> -> _SINK_
+<org.qiyi.video.security.AESUtil: byte[] encrypt(java.lang.String,java.lang.String,byte[])> -> _SINK_
+<com.umeng.commonsdk.statistics.common.DataHelper: byte[] encrypt(byte[],byte[])> -> _SINK_
+<fpa.fpa.fpa.fpa.fpk.fpa: byte[] a(byte[])> -> _SINK_
+<com.tencent.qalsdk.core.k: java.lang.String e()> -> _SINK_
+<com.tencent.qalsdk.core.k: java.lang.String e()> -> _SINK_
+<com.qiyi.qyapm.agent.android.utils.FileUtils: byte[] cipherOperation(byte[],byte[],int)> -> _SINK_
+<com.xiaomi.push.i: byte[] a(byte[],byte[])> -> _SINK_
+<com.uc.crashsdk.a.c: byte[] a(byte[],byte[],boolean,boolean)> -> _SINK_
+<com.uc.crashsdk.a.c: byte[] a(byte[],byte[],boolean,boolean)> -> _SINK_
+<com.xiaomi.push.i: byte[] b(byte[],byte[])> -> _SINK_
+<com.alipay.sdk.encrypt.f: byte[] b(java.lang.String,byte[],java.lang.String)> -> _SINK_
+<com.alipay.sdk.encrypt.f: byte[] a(java.lang.String,byte[],java.lang.String)> -> _SINK_
+<com.heytap.mcssdk.f.b: java.lang.String a(java.lang.String,java.lang.String)> -> _SINK_
+<cn.com.chinatelecom.gateway.lib.a.a: java.lang.String c(java.lang.String,java.lang.String)> -> _SINK_
+<cn.com.chinatelecom.gateway.lib.a.a: byte[] b(java.lang.String,java.lang.String)> -> _SINK_
+<cn.com.chinatelecom.gateway.lib.a.a: java.lang.String a(java.lang.String,java.lang.String)> -> _SINK_
+<org.android.agoo.common.a: byte[] a(byte[],javax.crypto.spec.SecretKeySpec,byte[])> -> _SINK_
+<com.umeng.message.proguard.c: java.lang.String a(java.lang.String[])> -> _SINK_
+<com.sina.weibo.sdk.utils.AesEncrypt: java.lang.String Decrypt(java.lang.String)> -> _SINK_
+<com.umeng.message.proguard.c: java.lang.String a(java.lang.String)> -> _SINK_
+<org.qiyi.video.security.AESUtil: byte[] decrypt(java.lang.String,java.lang.String,byte[])> -> _SINK_
+<com.iqiyi.psdk.base.internal.PBAES: java.lang.String decrypt(java.lang.String)> -> _SINK_
+<com.huawei.secure.android.common.encrypt.aes.AesCbc: byte[] encrypt(byte[],byte[],byte[])> -> _SINK_
+<com.iqiyi.passportsdk.interflow.safe.DataEncryptor: java.lang.String encrypt(java.lang.String,long)> -> _SINK_
+<com.iqiyi.passportsdk.interflow.safe.DataEncryptor: java.lang.String decrypt(java.lang.String,long)> -> _SINK_
+<com.iqiyi.psdk.base.internal.PBEncrypt: java.lang.String encryptData(java.lang.String,java.math.BigInteger,java.math.BigInteger)> -> _SINK_
+<com.qiyi.baselib.security.AESAlgorithm: java.lang.String decrypt(java.lang.String)> -> _SINK_
+<com.qiyi.baselib.security.AESAlgorithm: java.lang.String encrypt(java.lang.String)> -> _SINK_
+<com.sijla.d.b: byte[] a(java.lang.String,byte[],byte[])> -> _SINK_
+<com.sijla.d.c: byte[] a(byte[],java.security.PublicKey)> -> _SINK_
+<com.alipay.security.mobile.module.a.a.c: java.lang.String b(java.lang.String,java.lang.String)> -> _SINK_
+<com.huawei.secure.android.common.encrypt.keystore.aes.AesGcmKS: byte[] decrypt(javax.crypto.SecretKey,byte[])> -> _SINK_
+<com.alipay.sdk.encrypt.e: byte[] a(java.lang.String,java.lang.String)> -> _SINK_
+<com.huawei.agconnect.config.a.i: byte[] a(javax.crypto.SecretKey,byte[])> -> _SINK_
+<com.sina.weibo.sdk.utils.AidTask: java.lang.String encryptRsa(java.lang.String,java.lang.String)> -> _SINK_
+<com.xiaomi.push.service.bl: byte[] a(javax.crypto.Cipher,int,byte[],int)> -> _SINK_
+<com.xiaomi.push.service.bl: byte[] a(javax.crypto.Cipher,int,byte[],int)> -> _SINK_
+<com.alipay.security.mobile.module.a.a.c: java.lang.String a(java.lang.String,java.lang.String)> -> _SINK_
+==============================================================
+<com.facebook.react.views.image.MultiPostprocessor: com.facebook.cache.common.CacheKey getPostprocessorCacheKey()> -> _SINK_
+<anetwork.channel.aidl.adapter.b: void tryGetRemoteNetworkInstance(int)> -> _SINK_
+<org.qiyi.basecore.imageloader.impl.fresco.QYNetworkRetryFetcher: okhttp3.OkHttpClient getFallbackOkHttpClient()> -> _SINK_
+<android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[])> -> _SINK_
+<org.qiyi.net.dispatcher.NetworkRunnable: void parseAndDeliverNetworkError(org.qiyi.net.Request,org.qiyi.net.exception.HttpException)> -> _SINK_
+<com.iqiyi.pui.verification.PhoneVerifyHandler$7: void onNetworkError()> -> _SINK_
+<com.tencent.imsdk.manager.NetConnectInfoCenter: boolean isNetworkConnected()> -> _SINK_
+<com.ssports.mobile.video.matchvideomodule.live.activity.GiraffePlayer2: void onNetworkChanged()> -> _SINK_
+<org.qiyi.basecore.imageloader.OkHttpClientFactory: okhttp3.OkHttpClient createDefaultOkHttpClient(org.qiyi.basecore.imageloader.ImageLoaderConfig)> -> _SINK_
+<com.ssports.mobile.video.net.HttpUtils: void httpPost(java.lang.String,com.alibaba.fastjson.JSONObject,com.ssports.mobile.video.net.HttpUtils$RequestCallBack)> -> _SINK_
+<com.xiaomi.mipush.sdk.FTOSPushHelper: void doInNetworkChange(android.content.Context)> -> _SINK_
+<com.ssports.mobile.video.videomodule.authority.VideoSecuriryConrol: void httpGet(java.lang.String,com.ssports.mobile.video.videomodule.authority.VideoSecuriryConrol$RequestCallBack)> -> _SINK_
+<com.ssports.mobile.video.net.HttpUtils: void httpGet(java.lang.String,com.alibaba.fastjson.JSONObject,com.ssports.mobile.video.net.HttpUtils$RequestCallBack)> -> _SINK_
+<com.qiyi.qyapm.agent.android.monitor.OLDebugMonitor: void postLocalFile(java.lang.String,java.lang.String,java.lang.String,com.qiyi.qyapm.agent.android.monitor.OLDebugMonitor$FileUploadListener)> -> _SINK_
+<com.iqiyi.pexui.info.helper.ThirdBindHelper$CommonGetSmsCodeCallback: void onNetworkError(java.lang.Object)> -> _SINK_
+<org.qiyi.net.Request: org.qiyi.net.Response parseNetworkResponse(org.qiyi.net.adapter.NetworkResponse)> -> _SINK_
+<org.greenrobot.eventbus.EventMetroManager: void dispatchPostSplashCreateResumeEvent(android.app.Activity,byte)> -> _SINK_
+<com.baidu.speech.asr.WakeUpControl: com.baidu.speech.core.BDSErrorDescription postEvent(java.lang.String,java.lang.String)> -> _SINK_
+<com.iqiyi.passportsdk.PassportApi$4: void onNetworkError(java.lang.Throwable)> -> _SINK_
+<org.qiyi.basecore.taskmanager.Task: void postUI()> -> _SINK_
+<com.ssports.mobile.video.init.MainInitTask: void initHttpLib(android.content.Context)> -> _SINK_
+<org.qiyi.basecore.taskmanager.Task: void postAsync()> -> _SINK_
+<com.baidu.speech.asr.SlotControl: com.baidu.speech.core.BDSErrorDescription postEvent(com.baidu.speech.core.BDSErrorDescription,java.lang.String)> -> _SINK_
+<org.cybergarage.http.HTTPSocket: boolean post(org.cybergarage.http.HTTPResponse,long,long,boolean)> -> _SINK_
+<androidx.core.view.ViewCompat: void postOnAnimationDelayed(android.view.View,java.lang.Runnable,long)> -> _SINK_
+<org.qiyi.net.toolbox.NetworkUtils: android.net.NetworkInfo getAvailableNetWorkInfo(android.content.Context)> -> _SINK_
+<com.iqiyi.passportsdk.interflow.InterflowHandler$3: void onNetworkError()> -> _SINK_
+<org.qiyi.basecore.taskmanager.threadpool.GroupedThreadPool: void workPostDelay(java.lang.Runnable,int)> -> _SINK_
+<androidx.recyclerview.widget.ViewInfoStore: androidx.recyclerview.widget.RecyclerView$ItemAnimator$ItemHolderInfo popFromPostLayout(androidx.recyclerview.widget.RecyclerView$ViewHolder)> -> _SINK_
+<androidx.recyclerview.widget.RecyclerView$ViewFlinger: void postOnAnimation()> -> _SINK_
+<org.cybergarage.http.HTTPSocket: boolean post(org.cybergarage.http.HTTPResponse,java.io.InputStream,long,long,boolean)> -> _SINK_
+<com.facebook.react.modules.core.ReactChoreographer: void postFrameCallback(com.facebook.react.modules.core.ReactChoreographer$CallbackType,com.facebook.react.modules.core.ChoreographerCompat$FrameCallback)> -> _SINK_
+<com.tencent.imsdk.manager.NetConnectInfoCenter: void updateNetworkType(android.net.NetworkInfo)> -> _SINK_
+<android.os.Handler: boolean post(java.lang.Runnable)> -> _SINK_
+<android.database.sqlite.SQLiteDatabase: long insertOrThrow(java.lang.String,java.lang.String,android.content.ContentValues)> -> _SINK_
+<com.hhb.deepcube.http.RequestTask: void initPOST(java.util.Map,boolean,okgo.DataTaskListener,boolean,boolean,boolean)> -> _SINK_
+<androidx.appcompat.widget.ActionBarOverlayLayout: void postAddActionBarHideOffset()> -> _SINK_
+<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putLong(java.lang.String,long)> -> _SINK_
+<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)> -> _SINK_
+<androidx.work.impl.utils.taskexecutor.DefaultTaskExecutor: void postToMainThread(java.lang.Runnable)> -> _SINK_
+<com.huawei.hms.api.IPCTransport: void post(com.huawei.hms.support.api.client.ApiClient,com.huawei.hms.support.api.transport.DatagramTransport$a)> -> _SINK_
+<com.iqiyi.pui.verification.PhoneVerifyHandler$12: void onNetworkError()> -> _SINK_
+<tencent.tls.tools.util: void save_network_type(android.content.Context,int)> -> _SINK_
+<androidx.fragment.app.FragmentManager: int postponePostponableTransactions(java.util.ArrayList,java.util.ArrayList,int,int,androidx.collection.ArraySet)> -> _SINK_
+<com.iqiyi.passportsdk.PassportModuleV2$25: void onNetworkError(java.lang.Object)> -> _SINK_
+<org.greenrobot.greendao.async.AsyncSession: org.greenrobot.greendao.async.AsyncOperation enqueueDatabaseOperation(org.greenrobot.greendao.async.AsyncOperation$OperationType,java.lang.Object,int)> -> _SINK_
+<com.umeng.message.common.UmengMessageDeviceConfig: java.lang.String getDeviceIDAes(android.content.Context)> -> _SINK_
+<com.ssports.mobile.video.matchvideomodule.common.view.LiveCallView: void callPost(java.lang.String,java.lang.String,boolean)> -> _SINK_
+<com.qiyi.qyapm.agent.android.utils.HttpClient: java.lang.String checkNetworkFlow(java.lang.String)> -> _SINK_
+<okhttp3.internal.connection.RouteDatabase: boolean shouldPostpone(okhttp3.Route)> -> _SINK_
+<com.ssports.mobile.video.matchvideomodule.live.activity.GiraffePlayer2: void noNetwork()> -> _SINK_
+<com.ssports.mobile.video.utils.ChatDanMuUtils: void httpGet(android.content.Context,java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.ssports.mobile.video.utils.ChatDanMuUtils$RequestCallBack)> -> _SINK_
+<org.cybergarage.http.HTTPRequest: org.cybergarage.http.HTTPResponse post(java.lang.String,int,boolean)> -> _SINK_
+<org.cybergarage.upnp.Device: void httpGetRequestRecieved(org.cybergarage.http.HTTPRequest)> -> _SINK_
+<com.iqiyi.pui.multiAccount.MultiAccountSmsVerifyDialog$8: void onNetworkError()> -> _SINK_
+<com.iqiyi.pexui.youth.PsdkYouthAppealPage$5: void onNetworkError(java.lang.Object)> -> _SINK_
+<java.io.Writer: void write(java.lang.String)> -> _SINK_
+<com.iqiyi.pui.inspection.InspectBizUtils$1: void onNetworkError()> -> _SINK_
+<com.ssports.mobile.common.das.SSDasImpl: java.lang.String post(com.ssports.mobile.common.das.SSDasReq,com.ssports.mobile.common.das.HttpParams,com.ssports.mobile.common.das.SSHandler,boolean)> -> _SINK_
+<org.grtc.NetworkMonitor: void notifyObserversOfNetworkConnect(org.grtc.NetworkChangeDetector$NetworkInformation)> -> _SINK_
+<org.greenrobot.eventbus.EventBus: void post(java.lang.Object)> -> _SINK_
+<kotlinx.coroutines.DispatchedContinuation: boolean postponeCancellation(java.lang.Throwable)> -> _SINK_
+<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putBoolean(java.lang.String,boolean)> -> _SINK_
+<com.qiyi.qyapm.agent.android.deliver.CommonDeliver: java.lang.String buildJsonHttp(com.qiyi.qyapm.agent.android.model.CommonModel)> -> _SINK_
+<androidx.work.impl.background.systemalarm.SystemAlarmDispatcher: void postOnMainThread(java.lang.Runnable)> -> _SINK_
+<dummyMainClass: org.qiyi.android.pingback.PingbackNetworkChangeReceiver dummyMainMethod_org_qiyi_android_pingback_PingbackNetworkChangeReceiver(android.content.Intent)> -> _SINK_
+<org.qiyi.net.dispatcher.RequestQueue: void removeNetWorkDispatcher(org.qiyi.net.dispatcher.NetworkDispatcher)> -> _SINK_
+<androidx.work.impl.model.WorkTypeConverters: int networkTypeToInt(androidx.work.NetworkType)> -> _SINK_
+<org.qiyi.net.dispatcher.NetworkRunnable: void parseHttpResponse(org.qiyi.net.Request,org.qiyi.net.adapter.NetworkResponse)> -> _SINK_
+<com.huawei.hms.adapter.BinderAdapter: void postConnDelayHandle()> -> _SINK_
+<com.iqiyi.pui.verify.PhoneVerifyUpSMSUI$13: void onNetworkError()> -> _SINK_
+<org.grtc.RoomParametersFetcher: void roomHttpResponseParse(java.lang.String)> -> _SINK_
+<org.qiyi.net.dispatcher.NetworkDispatcher: void parseHttpResponse(org.qiyi.net.Request,org.qiyi.net.adapter.NetworkResponse)> -> _SINK_
+<org.qiyi.net.httpengine.impl.DnsResolver: java.lang.String httpGet(java.lang.String)> -> _SINK_
+<dummyMainClass: com.alibaba.sdk.android.httpdns.p$1 dummyMainMethod_com_alibaba_sdk_android_httpdns_p$1(android.content.Intent)> -> _SINK_
+<org.cybergarage.http.HTTPRequest: org.cybergarage.http.HTTPResponse post(java.lang.String,int)> -> _SINK_
+<com.hhb.deepcube.http.RequestTask: void initPOST(java.util.Map,boolean,okgo.DataTaskListener)> -> _SINK_
+<com.tendcloud.tenddata.bd: void post(java.lang.Object)> -> _SINK_
+<com.ssports.mobile.video.view.BackplayChargeVideoController: void isUserMobileNetWork()> -> _SINK_
+<com.qiyi.qyapm.agent.android.deliver.Deliver: void DoPostWithCallback(java.lang.String,java.lang.String,com.qiyi.qyapm.agent.android.utils.HttpClient$iHttpCallBack)> -> _SINK_
+<org.grtc.WebSocketRTCClient: void onHttpMessage(java.lang.String,java.lang.String,boolean)> -> _SINK_
+<android.os.Handler: boolean postDelayed(java.lang.Runnable,long)> -> _SINK_
+<com.iqiyi.pui.verification.PhoneVerifyHandler$15: void onNetworkError()> -> _SINK_
+<com.iqiyi.passportsdk.utils.AuthChecker$4: void onNetworkError()> -> _SINK_
+<org.greenrobot.eventbus.EventMetroManager: void postLifecycleEvent(android.app.Activity,boolean,boolean,byte)> -> _SINK_
+<com.iqiyi.passportsdk.PassportModuleV2$15: void onNetworkError()> -> _SINK_
+<com.iqiyi.pui.modifypwd.ModifyPwdApplyUI$7: void onNetworkError()> -> _SINK_
+<androidx.recyclerview.widget.ViewInfoStore: void addToPostLayout(androidx.recyclerview.widget.RecyclerView$ViewHolder,androidx.recyclerview.widget.RecyclerView$ItemAnimator$ItemHolderInfo)> -> _SINK_
+<org.grtc.RoomParametersFetcher$1: void onHttpComplete(java.lang.String,java.lang.String,boolean)> -> _SINK_
+<com.iqiyi.pui.verification.VerificationPhoneSetpwdUI$6: void onNetworkError()> -> _SINK_
+<com.iqiyi.pui.verify.PhoneVerifySmsCodeUI$6: void onNetworkError()> -> _SINK_
+<java.net.URL: void set(java.lang.String,java.lang.String,int,java.lang.String,java.lang.String)> -> _SINK_
+<com.facebook.imagepipeline.cache.DefaultCacheKeyFactory: com.facebook.cache.common.CacheKey getPostprocessedBitmapCacheKey(com.facebook.imagepipeline.request.ImageRequest,java.lang.Object)> -> _SINK_
+<com.hhb.deepcube.live.views.AITagViewLayout: void postStatistics(int)> -> _SINK_
+<org.greenrobot.eventbus.EventBus: boolean postSingleEventForEventType(java.lang.Object,org.greenrobot.eventbus.EventBus$PostingThreadState,java.lang.Class)> -> _SINK_
+<android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues,android.os.Bundle)> -> _SINK_
+<de.greenrobot.event.EventBus: void post(java.lang.Object)> -> _SINK_
+<org.cybergarage.upnp.std.av.server.MediaServer: void httpRequestRecieved(org.cybergarage.http.HTTPRequest)> -> _SINK_
+<com.iqiyi.pui.multiAccount.MultiAccountHandler$1: void onNetworkError()> -> _SINK_
+<com.ssports.mobile.common.das.SSDasImpl: java.lang.String newSSHttpPost(com.ssports.mobile.common.das.SSDasReq,com.ssports.mobile.common.das.SSHttpParams,com.ssports.mobile.common.das.SSHandler)> -> _SINK_
+<com.qiyi.baselib.privacy.Utils: int reCheck5GNetworkType(android.content.Context,int)> -> _SINK_
+<org.cybergarage.soap.SOAPRequest: org.cybergarage.soap.SOAPResponse postMessage(java.lang.String,int,boolean,boolean)> -> _SINK_
+<android.os.Handler: boolean postAtFrontOfQueue(java.lang.Runnable)> -> _SINK_
+<com.iqiyi.android.dlna.sdk.HttpRequestUtils: java.lang.String sendJsonPost(java.lang.String,java.util.Map)> -> _SINK_
+<com.iqiyi.passportsdk.PassportModuleV2$24: void onNetworkError(java.lang.Object)> -> _SINK_
+<androidx.fragment.app.SpecialEffectsController: void forcePostponedExecutePendingOperations()> -> _SINK_
+<com.hhb.deepcube.views.PhotoView$Transform: void postExecute()> -> _SINK_
+<com.facebook.imagepipeline.producers.PostprocessorProducer$PostprocessorConsumer: void doPostprocessing(com.facebook.common.references.CloseableReference,int)> -> _SINK_
+<com.lzy.okgo.cache.policy.BaseCachePolicy: void requestNetworkAsync()> -> _SINK_
+<com.iqiyi.passportsdk.interflow.InterflowSdk$7: void onNetworkError()> -> _SINK_
+<com.iqiyi.pui.register.PhoneBindPhoneNumberUI$3: void onNetworkError()> -> _SINK_
+<org.qiyi.context.adapter.ContextProviderMgr: void postJob(java.lang.Runnable,java.lang.String)> -> _SINK_
+<com.meizu.cloud.pushsdk.util.MzSystemUtils: java.lang.String getNetWorkType(android.content.Context)> -> _SINK_
+<androidx.appcompat.app.AppCompatDelegateImpl: void onPostResume()> -> _SINK_
+<androidx.appcompat.app.AppCompatActivity: void onPostCreate(android.os.Bundle)> -> _SINK_
+<com.alibaba.sdk.android.httpdns.u: void reportHttpDnsSuccess(java.lang.String,int)> -> _SINK_
+<com.huawei.hms.framework.common.NetworkUtil: int getHwNetworkType(android.content.Context)> -> _SINK_
+<com.iqiyi.passportsdk.PassportModuleV2$23: void onNetworkError(java.lang.Object)> -> _SINK_
+<android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues)> -> _SINK_
+<com.iqiyi.pbui.lite.PBLiteBaseFragment: boolean checkNetworkAvailable()> -> _SINK_
+<org.qiyi.net.httpengine.impl.RequestModifierEntity: java.util.Map getPostBodyParameters(org.qiyi.net.Request)> -> _SINK_
+<anet.channel.SessionCenter$a: void onNetworkStatusChanged(anet.channel.status.NetworkStatusHelper$NetworkStatus)> -> _SINK_
+<com.mcto.player.mctoplayer.MctoPlayerUtils: boolean IsDolbyAudioPostprocessingSupported()> -> _SINK_
+<com.tencent.imsdk.manager.NetConnectInfoCenter: void onNetworkChanged(android.content.Context,android.content.Intent)> -> _SINK_
+<com.baidu.speech.utils.Utility: boolean isNetworkPerission(android.content.Context)> -> _SINK_
+<com.facebook.rebound.ChoreographerCompat: void postFrameCallback(com.facebook.rebound.ChoreographerCompat$FrameCallback)> -> _SINK_
+<com.iqiyi.passportsdk.utils.PsdkUtils: android.net.NetworkInfo getAvailableNetWorkInfo(android.content.Context)> -> _SINK_
+<com.qiyi.baselib.net.NetWorkTypeUtils: android.net.NetworkInfo getAvailableNetWorkInfo(android.content.Context)> -> _SINK_
+<com.iqiyi.pbui.lite.LiteSmsVerifyUI$4: void onNetworkError()> -> _SINK_
+<master.flame.danmaku.controller.CacheManagingDrawTask$CacheManager: void post(java.lang.Runnable)> -> _SINK_
+<tencent.tls.tools.util: int get_saved_network_type(android.content.Context)> -> _SINK_
+<org.cybergarage.upnp.Device: void httpPostRequestRecieved(org.cybergarage.http.HTTPRequest)> -> _SINK_
+<com.qiyi.copyablecache.Cache: void post(java.lang.Runnable)> -> _SINK_
+<org.grtc.WebSocketRTCClient: boolean parseNewSignalHttpResponse(java.lang.String,java.lang.String,boolean)> -> _SINK_
+<com.iqiyi.passportsdk.http.CommonParams: void appendParamsForPost(java.util.Map)> -> _SINK_
+<org.qiyi.basecore.taskmanager.threadpool.GroupedThreadPool: void postToMainThread(org.qiyi.basecore.taskmanager.TaskWrapper)> -> _SINK_
+<org.grtc.NetworkMonitor: void notifyObserversOfNetworkDisconnect(long)> -> _SINK_
+<com.iqiyi.pexui.editinfo.PhoneEditPersonalInfoUI$11: void onNetworkError()> -> _SINK_
+<org.qiyi.net.toolbox.NetworkUtils: android.net.NetworkInfo getExtraNetworkInfo(android.net.ConnectivityManager)> -> _SINK_
+<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putInt(java.lang.String,int)> -> _SINK_
+<com.sina.weibo.sdk.net.HttpManager: org.apache.http.HttpResponse requestHttpExecute(android.content.Context,java.lang.String,java.lang.String,com.sina.weibo.sdk.net.WeiboParameters)> -> _SINK_
+<android.database.sqlite.SQLiteDatabase: long insertWithOnConflict(java.lang.String,java.lang.String,android.content.ContentValues,int)> -> _SINK_
+<org.grtc.NetworkMonitor$2: void onNetworkDisconnect(long)> -> _SINK_
+<com.qiyi.security.fingerprint.pingback.FingerPrintPingBackManager: void sendWithHttpError(int,java.lang.String)> -> _SINK_
+<com.qiyi.qyapm.agent.android.deliver.BizTraceDeliver: java.lang.String buildJsonHttp(com.qiyi.qyapm.agent.android.model.BizTraceModelList)> -> _SINK_
+<com.ssports.mobile.video.utils.ImageCroppingView: void compatPostOnAnimation(java.lang.Runnable)> -> _SINK_
+<org.grtc.WebSocketChannelClient$2: void onHttpError(java.lang.String,int,org.grtc.util.AsyncHttpURLConnection$SignalErrorType,java.lang.String,java.lang.String,boolean)> -> _SINK_
+<com.iqiyi.pui.register.PhoneSettingPwdUI$6: void onNetworkError()> -> _SINK_
+<org.greenrobot.greendao.async.AsyncOperationExecutor: void executeOperationAndPostCompleted(org.greenrobot.greendao.async.AsyncOperation)> -> _SINK_
+<org.qiyi.net.Request: org.qiyi.net.entity.IBody getPostBody()> -> _SINK_
+<org.qiyi.android.pingback.internal.utils.PingbackNetworkUtils: java.lang.String getNetworkType(android.content.Context)> -> _SINK_
+<com.ssports.mobile.video.game.view.fragment.GamesFragment: void redirectPostion()> -> _SINK_
+<com.xiaomi.mipush.sdk.MiPushClient: void registerNetworkReceiver(android.content.Context)> -> _SINK_
+<com.iqiyi.pbui.helper.PsdkSportMergeHelper$1: void onNetworkError()> -> _SINK_
+<com.ssports.mobile.video.activity.BaseLiveVideoActivity: void onNoNetWork()> -> _SINK_
+<com.ssports.mobile.video.view.BackplayChargeVideoController: void onNetworkChanged()> -> _SINK_
+<androidx.lifecycle.LiveData: void postValue(java.lang.Object)> -> _SINK_
+<com.baidu.speech.asr.SlotControl: com.baidu.speech.core.BDSErrorDescription postEvent(java.lang.String,java.lang.String)> -> _SINK_
+<com.iqiyi.pui.verify.PhoneVerifyEmailCodeUI$4: void onNetworkError()> -> _SINK_
+<com.iqiyi.passportsdk.PassportModuleV2$28: void onNetworkError()> -> _SINK_
+<com.qiyi.qyui.util.thread.WorkHandler: void post(java.lang.Runnable)> -> _SINK_
+<org.qiyi.basecore.taskmanager.TickTask: void postAsyncDelay(int)> -> _SINK_
+<com.iqiyi.passportsdk.PassportModuleV2$22: void onNetworkError(java.lang.Object)> -> _SINK_
+<org.qiyi.net.dispatcher.PingBackRunnable: void parseHttpResponse(org.qiyi.net.Request,org.qiyi.net.adapter.NetworkResponse)> -> _SINK_
+<androidx.loader.content.AsyncTaskLoader$LoadTask: void onPostExecute(java.lang.Object)> -> _SINK_
+<com.huawei.hms.common.internal.HmsClient: void post(com.huawei.hms.core.aidl.IMessageEntity,java.lang.String,com.huawei.hms.common.internal.AnyClient$CallBack)> -> _SINK_
+<androidx.lifecycle.ServiceLifecycleDispatcher: void postDispatchRunnable(androidx.lifecycle.Lifecycle$Event)> -> _SINK_
+<com.iqiyi.passportsdk.PassportModuleV2: void appendForPost(java.util.TreeMap)> -> _SINK_
+<org.greenrobot.eventbus.EventBus: void checkPostStickyEventToSubscription(org.greenrobot.eventbus.Subscription,java.lang.Object)> -> _SINK_
+<com.iqiyi.pui.verify.mvp.PsdkSmsCodePresenter$9: void onNetworkError()> -> _SINK_
+<com.facebook.react.uimanager.events.EventDispatcher$ScheduleDispatchFrameCallback: void maybePost()> -> _SINK_
+<com.iqiyi.pui.inspection.PhoneSafetyInspectionUI$16: void onNetworkError()> -> _SINK_
+<org.qiyi.basecore.taskmanager.threadpool.TaskManagerExecutor: void workPostDelay(java.lang.Runnable,int)> -> _SINK_
+<com.aspsine.header_footer.drawable.google.ProgressDrawable: void postDelayed(java.lang.Runnable,int)> -> _SINK_
+<com.iqiyi.passportsdk.http.CommonParams: java.util.Map encodeAllPostParams(java.util.Map)> -> _SINK_
+<dummyMainClass: com.xiaomi.push.service.receivers.NetworkStatusReceiver dummyMainMethod_com_xiaomi_push_service_receivers_NetworkStatusReceiver(android.content.Intent)> -> _SINK_
+<dummyMainClass: com.ssports.mobile.video.activity.MainActivity$NetWorkReceiver dummyMainMethod_com_ssports_mobile_video_activity_MainActivity$NetWorkReceiver(android.content.Intent)> -> _SINK_
+<org.qiyi.net.adapter.ResponseEntity: void setHttpVersion(okhttp3.Protocol)> -> _SINK_
+<org.qiyi.basecore.taskmanager.threadpool.TaskManagerExecutor: void postToMainThread(org.qiyi.basecore.taskmanager.TaskWrapper)> -> _SINK_
+<dummyMainClass: com.ssports.mobile.video.nomatchlive.NoMatchLiveActivity$NetworkReceiver dummyMainMethod_com_ssports_mobile_video_nomatchlive_NoMatchLiveActivity$NetworkReceiver(android.content.Intent)> -> _SINK_
+<androidx.media.MediaBrowserServiceCompat$ServiceHandler: void postOrRun(java.lang.Runnable)> -> _SINK_
+<org.grtc.NetworkMonitor$2: void onNetworkConnect(org.grtc.NetworkChangeDetector$NetworkInformation)> -> _SINK_
+<com.iqiyi.pui.modifypwd.ModifyPwdApplyUI$6: void onNetworkError()> -> _SINK_
+<com.huawei.hms.framework.common.NetworkUtil: int getNetworkType(android.net.NetworkInfo,android.content.Context)> -> _SINK_
+<com.iqiyi.pui.verification.PhoneVerifyHandler$14: void onNetworkError()> -> _SINK_
+<androidx.recyclerview.widget.RecyclerView: void postAnimationRunner()> -> _SINK_
+<com.iqiyi.pui.verify.PhoneUpSmsDirectActivity$7: void onNetworkError()> -> _SINK_
+<org.qiyi.net.httpengine.impl.RequestModifierEntity: java.util.Map getPostBodyParams()> -> _SINK_
+<com.facebook.react.uimanager.events.EventDispatcher$ScheduleDispatchFrameCallback: void post()> -> _SINK_
+<org.grtc.util.AsyncHttpURLConnection: void sendHttpMessage()> -> _SINK_
+<com.baidu.speech.core.ASREngine: com.baidu.speech.core.BDSErrorDescription postEvent(java.lang.String,java.lang.String)> -> _SINK_
+<com.iqiyi.passportsdk.PassportModuleV2$31: void onNetworkError()> -> _SINK_
+<org.qiyi.net.dispatcher.ResponseDelivery: void postError(org.qiyi.net.Request,org.qiyi.net.exception.HttpException)> -> _SINK_
+<org.cybergarage.upnp.Action: boolean postControlAction()> -> _SINK_
+<org.qiyi.context.adapter.DefaultContextProvider$DefaultContextAdatper: void postJob(java.lang.Runnable,java.lang.String)> -> _SINK_
+<org.grtc.WebSocketRTCClient: void sendPostJanusMessage(org.grtc.WebSocketRTCClient$MessageType,java.lang.String,java.lang.String,int,boolean,java.lang.String)> -> _SINK_
+<com.iqiyi.pexui.youth.PsdkYouthAppealPage$6: void onNetworkError(java.lang.Object)> -> _SINK_
+<androidx.recyclerview.widget.RecyclerView$ViewFlinger: void internalPostOnAnimation()> -> _SINK_
+<androidx.appcompat.app.AppCompatDelegateImpl: void onPostCreate(android.os.Bundle)> -> _SINK_
+<org.qiyi.android.pingback.internal.executor.PingbackExecutorUtil: void post(java.lang.Runnable)> -> _SINK_
+<com.alibaba.sdk.android.httpdns.HttpDns: void reportHttpDnsSuccess(java.lang.String,int)> -> _SINK_
+<com.ssports.mobile.video.phmodule.view.activity.BloggerHomePagerActivity: void onNoNetWork(java.lang.String)> -> _SINK_
+<androidx.appcompat.app.AppCompatActivity: void onPostResume()> -> _SINK_
+<com.iqiyi.pui.verify.mvp.PsdkSmsCodePresenter$1: void onNetworkError()> -> _SINK_
+<com.xiaomi.mipush.sdk.COSPushHelper: void doInNetworkChange(android.content.Context)> -> _SINK_
+<okhttp3.internal.http2.Http2Codec: java.util.List http2HeadersList(okhttp3.Request)> -> _SINK_
+<com.ssports.mobile.video.view.BackplayVideoController: void isUserMobileNetWork()> -> _SINK_
+<org.grtc.WebSocketRTCClient$10: void onHttpComplete(java.lang.String,java.lang.String,boolean)> -> _SINK_
+<com.iqiyi.passportsdk.PassportModuleV2$26: void onNetworkError(java.lang.Object)> -> _SINK_
+<com.ssports.mobile.video.view.BackplayVideoController: void onNetworkChanged()> -> _SINK_
+<com.iqiyi.android.dlna.sdk.HttpRequestUtils: java.lang.String toHttpParamString(java.util.Map)> -> _SINK_
+<com.ssports.mobile.common.das.SSDasImpl: java.lang.String newPost(com.ssports.mobile.common.das.SSDasReq,com.ssports.mobile.common.das.HttpParams,com.ssports.mobile.common.das.SSHandler)> -> _SINK_
+<org.qiyi.net.dispatcher.ResponseDelivery: void postResponse(org.qiyi.net.Request,org.qiyi.net.Response)> -> _SINK_
+<com.iqiyi.passportsdk.internal.ClientDelegate: java.lang.Object getHttpApi(java.lang.Class)> -> _SINK_
+<com.taobao.aranger.utils.IPCThreadCaller: void post(boolean,java.lang.Runnable)> -> _SINK_
+<com.facebook.react.uimanager.events.EventDispatcher: void maybePostFrameCallbackFromNonUI()> -> _SINK_
+<org.cybergarage.http.HTTPRequest: boolean post(org.cybergarage.http.HTTPResponse)> -> _SINK_
+<android.database.sqlite.SQLiteDatabase: long insert(java.lang.String,java.lang.String,android.content.ContentValues)> -> _SINK_
+<com.qiyi.qyapm.agent.android.deliver.Deliver: void DoPost(java.lang.String,java.lang.String)> -> _SINK_
+<com.iqiyi.passportsdk.http.CommonParams: void appendParamsForQdscPost(java.util.TreeMap)> -> _SINK_
+<com.tencent.open.utils.HttpUtils: java.lang.String encodePostBody(android.os.Bundle,java.lang.String)> -> _SINK_
+<com.iqiyi.psdk.base.internal.PBEncrypt: void appendEncrypParamsForPostQdsc(java.util.TreeMap)> -> _SINK_
+<com.ssports.mobile.common.das.SSDasImpl: java.lang.String post(java.lang.String,java.lang.Class,int,com.ssports.mobile.common.das.SSHandler,java.lang.String)> -> _SINK_
+<com.ssports.mobile.video.photoview.Compat: void postOnAnimation(android.view.View,java.lang.Runnable)> -> _SINK_
+<com.sina.weibo.sdk.net.HttpManager: void setHttpCommonParam(android.content.Context,com.sina.weibo.sdk.net.WeiboParameters)> -> _SINK_
+<org.qiyi.net.dispatcher.PingBackRunnable: void parseAndDeliverNetworkError(org.qiyi.net.Request,org.qiyi.net.exception.HttpException)> -> _SINK_
+<androidx.fragment.app.Fragment: void startPostponedEnterTransition()> -> _SINK_
+<androidx.work.impl.utils.taskexecutor.WorkManagerTaskExecutor: void postToMainThread(java.lang.Runnable)> -> _SINK_
+<com.facebook.imagepipeline.producers.PostprocessorProducer$PostprocessorConsumer: void submitPostprocessing()> -> _SINK_
+<org.cybergarage.util.NetworkUtil: org.cybergarage.util.NetworkUtil$NETWORK_TYPE getNetworkTypeByName(java.lang.String)> -> _SINK_
+<com.qiyi.qyapm.agent.android.deliver.HttpDeliver: java.lang.String buildJsonHttp(com.qiyi.qyapm.agent.android.model.HttpModelList)> -> _SINK_
+<com.iqiyi.psdk.base.utils.PBUtils: java.lang.String getNetWorkStatus(android.content.Context)> -> _SINK_
+<androidx.work.impl.utils.EnqueueRunnable: boolean addToDatabase()> -> _SINK_
+<com.qiyi.baselib.net.NetWorkTypeUtils: java.lang.String getNetWorkType(android.content.Context,android.net.NetworkInfo)> -> _SINK_
+<org.cybergarage.upnp.event.SubscriptionRequest: org.cybergarage.upnp.event.SubscriptionResponse post()> -> _SINK_
+<anet.channel.strategy.StrategyInfoHolder: void onNetworkStatusChanged(anet.channel.status.NetworkStatusHelper$NetworkStatus)> -> _SINK_
+<com.haha.http.HaHttpAsyncClient: void post(java.lang.String,int,com.haha.http.HaHttpHandler,java.lang.String)> -> _SINK_
+<com.iqiyi.passportsdk.register.RegisterManager$3: void onNetworkError()> -> _SINK_
+<org.greenrobot.eventbus.EventBus: void postToSubscription(org.greenrobot.eventbus.Subscription,java.lang.Object,boolean)> -> _SINK_
+<com.rsdev.base.rsenginemodule.notify.RSNotificationCenter: void postNotification(java.lang.String,java.lang.Object)> -> _SINK_
+<org.qiyi.android.video.ui.account.inspection.PWebViewActivity$ChangeAccountCallback: void onNetworkError()> -> _SINK_
+<org.qiyi.net.dispatcher.NetworkDispatcher: void parseAndDeliverNetworkError(org.qiyi.net.Request,org.qiyi.net.exception.HttpException)> -> _SINK_
+<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putFloat(java.lang.String,float)> -> _SINK_
+<com.airbnb.lottie.network.NetworkFetcher: com.airbnb.lottie.LottieResult fetchFromNetwork()> -> _SINK_
+<com.iqiyi.pbui.lite.LiteSmsVerifyUI$3: void onNetworkError()> -> _SINK_
+<com.tendcloud.tenddata.ca: void postSDKError(java.lang.Throwable)> -> _SINK_
+<org.qiyi.net.dispatcher.CacheDispatcher: void parseHttpResponse(org.qiyi.net.Request,org.qiyi.net.cache.Cache$Entry)> -> _SINK_
+<com.ssports.mobile.video.view.BackplayChargeVideoController: void noNetwork()> -> _SINK_
+<com.facebook.react.uimanager.events.EventDispatcher$ScheduleDispatchFrameCallback: void maybePostFromNonUI()> -> _SINK_
+<com.iqiyi.pui.register.PhoneSettingPwdUI$7: void onNetworkError()> -> _SINK_
+<com.iqiyi.pbui.lite.LiteSmsVerifyUI$6: void onNetworkError(java.lang.Object)> -> _SINK_
+<com.iqiyi.psdk.base.internal.PBEncrypt: void appendEncrypParamsForPost(java.util.Map)> -> _SINK_
+<org.qiyi.basecore.taskmanager.TM: void postAsync(java.lang.Runnable)> -> _SINK_
+<com.facebook.imagepipeline.core.ProducerSequenceFactory: com.facebook.imagepipeline.producers.Producer getPostprocessorSequence(com.facebook.imagepipeline.producers.Producer)> -> _SINK_
+<com.qiyi.qyapm.agent.android.deliver.BizTraceSumDeliver: java.lang.String buildJsonHttp(java.util.List)> -> _SINK_
+<com.qiyi.baselib.net.NetWorkTypeUtils: com.qiyi.baselib.net.NetworkStatus getNetworkStatusByType(android.content.Context)> -> _SINK_
+<android.database.sqlite.SQLiteDatabase: int updateWithOnConflict(java.lang.String,android.content.ContentValues,java.lang.String,java.lang.String[],int)> -> _SINK_
+<org.cybergarage.upnp.control.ActionRequest: org.cybergarage.upnp.control.ActionResponse post(boolean,boolean)> -> _SINK_
+<com.ssports.mobile.common.das.SSDasImpl: java.lang.String post(java.lang.String,java.lang.Class,int,com.ssports.mobile.common.das.SSHandler)> -> _SINK_
+<com.iqiyi.psdk.base.utils.PBUtils: boolean isNetworkAvailable(android.content.Context)> -> _SINK_
+<org.qiyi.android.video.ui.account.interflow.InterflowActivity$9: void onNetworkError()> -> _SINK_
+<org.qiyi.android.pingback.internal.executor.PingbackExecutorUtil: void post(java.lang.Runnable,boolean)> -> _SINK_
+<com.facebook.react.views.scroll.ReactHorizontalScrollView: void handlePostTouchScrolling(int,int)> -> _SINK_
+<com.iqiyi.pui.verification.PsdkSecurityCommonHanlder$2: void onNetworkError()> -> _SINK_
+<com.iqiyi.android.dlna.sdk.cloudcontroller.lelink.LelinkController: void sendHttpRequest(java.lang.String,java.util.Map,boolean,com.iqiyi.android.dlna.sdk.cloudcontroller.lelink.ILelinkCallback)> -> _SINK_
+<com.ssports.mobile.video.view.HomeListVideoController: boolean isUserMobileNetWork()> -> _SINK_
+<androidx.arch.core.executor.DefaultTaskExecutor: void postToMainThread(java.lang.Runnable)> -> _SINK_
+<com.iqiyi.passportsdk.thirdparty.H5CommonParams: java.lang.String appendForPostDataH5(java.lang.String)> -> _SINK_
+<com.iqiyi.passportsdk.PassportApi$2: void onNetworkError(java.lang.Throwable)> -> _SINK_
+<com.sina.weibo.sdk.net.NetUtils: java.lang.String internalHttpRequest(android.content.Context,java.lang.String,java.lang.String,com.sina.weibo.sdk.net.WeiboParameters)> -> _SINK_
+<com.airbnb.lottie.network.NetworkFetcher: com.airbnb.lottie.LottieResult fetchFromNetworkInternal()> -> _SINK_
+<com.facebook.imagepipeline.producers.PostprocessorProducer$PostprocessorConsumer: com.facebook.common.references.CloseableReference postprocessInternal(com.facebook.imagepipeline.image.CloseableImage)> -> _SINK_
+<org.qiyi.android.video.ui.account.interflow.InterflowTransferActivity$1: void onNetworkError()> -> _SINK_
+<androidx.arch.core.executor.ArchTaskExecutor: void postToMainThread(java.lang.Runnable)> -> _SINK_
+<com.iqiyi.pui.verification.PsdkSecurityCommonHanlder$3: void onNetworkError()> -> _SINK_
+<okhttp3.internal.http2.ErrorCode: okhttp3.internal.http2.ErrorCode fromHttp2(int)> -> _SINK_
+<com.iqiyi.pui.inspection.InspectBizUtils$4: void onNetworkError()> -> _SINK_
+<androidx.work.impl.background.systemjob.SystemJobInfoConverter: int convertNetworkType(androidx.work.NetworkType)> -> _SINK_
+<com.ssports.mobile.video.newsdetailmodule.view.NewsInfoActivity: void noNetWork()> -> _SINK_
+<org.qiyi.android.pingback.internal.utils.NetworkTypeDelegateImpl: java.lang.String getNetworkType(android.content.Context)> -> _SINK_
+<com.ssports.mobile.video.vdbmodule.viewpager.view.SwipeSplayerBackActivity: void onPostCreate(android.os.Bundle)> -> _SINK_
+<com.ssports.mobile.video.vdbmodule.player.scrollplayer.SPlayerController: void checkNetWork()> -> _SINK_
+<okhttp3.internal.http2.Http2Codec: okhttp3.Response$Builder readHttp2HeadersList(okhttp3.Headers,okhttp3.Protocol)> -> _SINK_
+<com.iqiyi.pui.verify.PhoneVerifySmsCodeUI$7: void onNetworkError(java.lang.Object)> -> _SINK_
+<org.cybergarage.upnp.Device: void httpRequestRecieved(org.cybergarage.http.HTTPRequest)> -> _SINK_
+<com.aspsine.header_footer.drawable.google.ProgressDrawable: void post(java.lang.Runnable)> -> _SINK_
+<androidx.fragment.app.FragmentManager: void forcePostponedTransactions()> -> _SINK_
+<org.cybergarage.http.HTTPRequest: boolean justPost(java.lang.String,int,boolean)> -> _SINK_
+<com.iqiyi.pui.inspection.PhoneSafetyInspectionUI$17: void onNetworkError()> -> _SINK_
+<com.iqiyi.pui.verify.PhoneVerifyUpSMSUI$5: void onNetworkError()> -> _SINK_
+<com.hhb.deepcube.http.RequestTask: void initPOST(java.util.Map,okgo.DataTaskListener)> -> _SINK_
+<com.qiyi.qyapm.agent.android.deliver.Deliver: void DoPostSync(java.lang.String,java.lang.String)> -> _SINK_
+<com.iqiyi.pexui.youth.PsdkYouthIdentityVerifyPage$5: void onNetworkError(java.lang.Object)> -> _SINK_
+<com.iqiyi.passportsdk.interflow.core.TransactHandler$1: void onNetworkError()> -> _SINK_
+<com.iqiyi.psdk.base.utils.PBUtils: boolean isMobileNetworkAvailable(android.content.Context)> -> _SINK_
+<com.iqiyi.pexui.editinfo.PhoneEditPersonalInfoUI: void showOrHideNetWorkFailView(boolean)> -> _SINK_
+<com.iqiyi.passportsdk.PassportModuleV2$1: void onNetworkError()> -> _SINK_
+<androidx.lifecycle.MutableLiveData: void postValue(java.lang.Object)> -> _SINK_
+<com.tencent.open.utils.HttpUtils: org.apache.http.client.HttpClient getHttpClient(android.content.Context,java.lang.String,java.lang.String)> -> _SINK_
+<com.iqiyi.pui.register.AbsGetSmsCodeUI$5: void onNetworkError(java.lang.Object)> -> _SINK_
+<tcking.github.com.giraffeplayer.AnchorLivePlayer: void onNetworkChanged()> -> _SINK_
+<com.iqiyi.pui.verification.PhoneVerifyHandler$13: void onNetworkError()> -> _SINK_
+<org.qiyi.basecore.taskmanager.TaskManager: void workPostDelay(java.lang.Runnable,int)> -> _SINK_
+<java.net.URLConnection: void setRequestProperty(java.lang.String,java.lang.String)> -> _SINK_
+<androidx.core.view.ViewCompat: void postOnAnimation(android.view.View,java.lang.Runnable)> -> _SINK_
+<com.iqiyi.pui.verify.PhoneVerifyUpSMSUI$AbsVerificationRequestCb: void onNetworkError()> -> _SINK_
+<androidx.fragment.app.FragmentManager: void executePostponedTransaction(java.util.ArrayList,java.util.ArrayList)> -> _SINK_
+<com.iqiyi.pbui.lite.LiteSmsVerifyUI$5: void onNetworkError()> -> _SINK_
+<com.hhb.deepcube.live.constract.AiBallLivePresenterImpl: void insertDataBase(com.hhb.deepcube.live.bean.LiveBean,java.lang.String)> -> _SINK_
+<com.baidu.speech.core.ASREngine: com.baidu.speech.core.BDSErrorDescription postEvent(com.baidu.speech.core.BDSErrorDescription,java.lang.String)> -> _SINK_
+<com.iqiyi.psdk.base.utils.PBUtils: android.net.NetworkInfo getAvailableNetWorkInfo(android.content.Context)> -> _SINK_
+<org.qiyi.net.dispatcher.ResponseDelivery: void postResponse(org.qiyi.net.Request,org.qiyi.net.Response,java.lang.Runnable)> -> _SINK_
+<com.iqiyi.passportsdk.PassportModuleV2$8: void onNetworkError()> -> _SINK_
+<anet.channel.request.Request: int postBody(java.io.OutputStream)> -> _SINK_
+<anet.channel.e.d: void onNetworkStatusChanged(anet.channel.status.NetworkStatusHelper$NetworkStatus)> -> _SINK_
+<de.greenrobot.event.EventBus: void postToSubscription(de.greenrobot.event.Subscription,java.lang.Object,boolean)> -> _SINK_
+<com.baidu.speech.asr.WakeUpControl: com.baidu.speech.core.BDSErrorDescription postEvent(com.baidu.speech.core.BDSErrorDescription,java.lang.String)> -> _SINK_
+<com.ssports.mobile.video.thread.Dispatcher: void runOnHttpThread(java.lang.Runnable)> -> _SINK_
+<com.sina.weibo.sdk.net.HttpManager: org.apache.http.client.HttpClient getNewHttpClient()> -> _SINK_
+<androidx.recyclerview.widget.DiffUtil$DiffResult: androidx.recyclerview.widget.DiffUtil$PostponedUpdate getPostponedUpdate(java.util.Collection,int,boolean)> -> _SINK_
+<cn.com.chinatelecom.gateway.lib.CtAuth: void postResultOnMainThread(android.content.Context,java.lang.String,java.lang.String,cn.com.chinatelecom.gateway.lib.PreCodeListener)> -> _SINK_
+<com.qiyi.baselib.immersion.ImmersionBar: void postFitsWindowsBelowLOLLIPOP()> -> _SINK_
+<org.cybergarage.upnp.ssdp.SSDPPacket: int getQiyiHttpPort()> -> _SINK_
+<androidx.dynamicanimation.animation.AnimationHandler$FrameCallbackProvider14: void postFrameCallback()> -> _SINK_
+<com.iqiyi.pui.verify.PhoneVerifyUpSMSUI$14: void onNetworkError()> -> _SINK_
+<com.huawei.hms.framework.common.NetworkUtil: android.net.NetworkInfo getNetworkInfo(android.content.Context)> -> _SINK_
+<org.greenrobot.eventbus.EventBus: void postSingleEvent(java.lang.Object,org.greenrobot.eventbus.EventBus$PostingThreadState)> -> _SINK_
+<dummyMainClass: com.ssports.mobile.video.videomodule.view.activity.ContinuousPlayActivity$NetworkReceiver dummyMainMethod_com_ssports_mobile_video_videomodule_view_activity_ContinuousPlayActivity$NetworkReceiver(android.content.Intent)> -> _SINK_
+<com.huawei.hms.framework.common.NetworkUtil: int getNetworkType(android.content.Context)> -> _SINK_
+<java.io.Writer: void write(java.lang.String,int,int)> -> _SINK_
+<com.iqiyi.passportsdk.http.PBHttpProxy: void buildPostBody(com.iqiyi.passportsdk.external.http.HttpRequest,com.qiyi.net.adapter.HttpRequest$Builder)> -> _SINK_
+<com.iqiyi.pui.verify.PhoneVerifyEmailCodeUI$2: void onNetworkError()> -> _SINK_
+<com.qiyi.baselib.net.NetWorkTypeUtils: android.net.NetworkInfo getExtraNetworkInfo(android.net.ConnectivityManager)> -> _SINK_
+<com.qiyi.baselib.net.NetWorkTypeUtils: java.lang.String getNetWorkType(android.content.Context)> -> _SINK_
+<org.grtc.WebSocketRTCClient$10: void onHttpError(java.lang.String,int,org.grtc.util.AsyncHttpURLConnection$SignalErrorType,java.lang.String,java.lang.String,boolean)> -> _SINK_
+<com.haha.http.HaHttpAsyncClient: void post(java.lang.String,int,com.haha.http.HaHttpHandler)> -> _SINK_
+<androidx.appcompat.widget.ActionBarOverlayLayout: void postRemoveActionBarHideOffset()> -> _SINK_
+<com.iqiyi.pexui.register.PhoneNumberChangeUI$2: void onNetworkError()> -> _SINK_
+<com.iqiyi.passportsdk.http.CommonParams: void appendPostCommonParam(java.util.Map)> -> _SINK_
+<org.greenrobot.eventbus.EventMetroManager: void postSync(long,org.qiyi.video.module.events.Lifecycle_Activity)> -> _SINK_
+<java.net.URL: void set(java.lang.String,java.lang.String,int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)> -> _SINK_
+<com.huawei.hms.framework.common.NetworkUtil: boolean isNetworkAvailable(android.content.Context)> -> _SINK_
+<com.ssports.mobile.video.HFJJListModule.HFJJLogic: void checkNetWork()> -> _SINK_
+<com.facebook.react.views.scroll.ReactScrollView: void handlePostTouchScrolling(int,int)> -> _SINK_
+<de.greenrobot.event.EventBus: boolean postSingleEventForEventType(java.lang.Object,de.greenrobot.event.EventBus$PostingThreadState,java.lang.Class)> -> _SINK_
+<okhttp3.internal.connection.RealConnection: void startHttp2(int,int)> -> _SINK_
+<com.iqiyi.psdk.base.PB: java.lang.Object getHttpApi(java.lang.Class)> -> _SINK_
+<org.qiyi.net.dns.DnsCacheManager: void onNetworkChanged(org.qiyi.net.toolbox.NetworkUtils$NetworkStatus)> -> _SINK_
+<com.qiyi.baselib.net.NetWorkTypeUtils: com.qiyi.baselib.net.NetworkStatus getNetworkStatusFor4G(android.content.Context)> -> _SINK_
+<com.umeng.message.common.UmengMessageDeviceConfig: java.lang.String getDINAes(android.content.Context)> -> _SINK_
+<android.database.sqlite.SQLiteDatabase: int update(java.lang.String,android.content.ContentValues,java.lang.String,java.lang.String[])> -> _SINK_
+<com.alibaba.sdk.android.httpdns.HttpDns: void initHttpDns(android.content.Context,java.lang.String,java.lang.String)> -> _SINK_
+<android.os.Handler: boolean postAtTime(java.lang.Runnable,long)> -> _SINK_
+<fpa.fpa.fpa.fpa.fpl.fpc.fpa: void asyncPostRunnable(java.lang.Runnable)> -> _SINK_
+<org.qiyi.android.video.ui.account.interflow.AuthorizationActivity$LotteryAuthCallback: void onNetworkError()> -> _SINK_
+<de.greenrobot.event.EventBus: void postSingleEvent(java.lang.Object,de.greenrobot.event.EventBus$PostingThreadState)> -> _SINK_
+<android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,android.os.Bundle)> -> _SINK_
