@@ -2,7 +2,7 @@ URL脱敏流程
 
 # 流程图 
 
-![流程图](E:%5CPycharmProjects%5Cdetection%5C%E6%B5%81%E7%A8%8B%E5%9B%BE-1649334789617.jpg)
+![流程图](https://github.com/GoSec-SYSU/url_filter_server/blob/main/md_img/%E6%B5%81%E7%A8%8B%E5%9B%BE.jpg)
 
 # 脱敏流程 
 
@@ -16,6 +16,6 @@ URL脱敏流程
 
 # 目前效果 
 
-![效果图](E:%5CPycharmProjects%5Cdetection%5C%E6%95%88%E6%9E%9C%E5%9B%BE.png)
+![效果图](https://github.com/GoSec-SYSU/url_filter_server/blob/main/md_img/%E6%95%88%E6%9E%9C%E5%9B%BE.png)
 
 ​		对于113个有用标注的脱敏测试中，共有103个完全脱敏成功，占91%，为完全脱敏有8个，占7%。脱敏失败的有2个，占2%左右，其中失败的原因是拼多多的界面不管怎么脱敏都只有登陆界面，另外一个马蜂窝旅行则是验证码界面，导致脱敏失败，**这个问题之后再想办法解决，暂时pending中** 
