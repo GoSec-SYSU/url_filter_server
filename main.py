@@ -1,6 +1,6 @@
 import csv
 import os
-from shortest_url_handler import Shortest_Url_Handler
+from shortest_url_handler_replace import Shortest_Url_Handler_Replace
 import xlwt
 from dao import mysql
 
@@ -10,9 +10,9 @@ if __name__ == '__main__':
     worksheet = workbook.add_sheet('data')
     ro = -1
     co = 0
-    check_exist_by_app_name_sql = "select * from desensitization_result where app_name='{}'"
-    delete_by_app_name_sql = "delete from desensitization_result where app_name='{}'"
-    insert_sql = "insert into desensitization_result(app_name, mes, ori_url, url, similarity) values('{}', '{}', '{}', '{}', {})"
+    check_exist_by_app_name_sql = "select * from desensitization_replace_result where app_name='{}'"
+    delete_by_app_name_sql = "delete from desensitization_replace_result where app_name='{}'"
+    insert_sql = "insert into desensitization_replace_result(app_name, mes, ori_url, url, similarity) values('{}', '{}', '{}', '{}', {})"
     with open('files/ori_data.csv', 'r', encoding='utf-8') as csvfile:
         reader = csv.reader(csvfile)
         cur = ''
@@ -41,8 +41,8 @@ if __name__ == '__main__':
                     while r < len(item) and item[r] != ' ' and item[r] != '\n':
                         r += 1
                     ori_url = item[l:r]
-                    suh = Shortest_Url_Handler(ori_url)
-                    mes, url, similarity = suh.get_shortest_url()
+                    suh = Shortest_Url_Handler_Replace(ori_url)
+                    mes, url, similarity = suh.get_shortest_url_main()
                     database.query(insert_sql.format(cur_app_name, mes, ori_url, url, similarity))
                     insert_new_data = True
                     output = '{}: {} -> {:.2f}%'.format(mes, url, similarity * 100)

@@ -40,7 +40,7 @@ if __name__ == '__main__':
     # browser.maximize_window()
     browser.set_window_size(1280, 800)
     # url = 'https://w8.soulsmile.cn/activity/#/web/user?targetUserIdEcpt=NVhKUEpCaEFHbkZYRnBhV05La1orUT09&userIdEcpt=NVhKUEpCaEFHbkZYRnBhV05La1orUT09&shareUserId=aGlEbXFkMno5M3FodUl5MEpNOUVkQT09&titleNum=4&sec=yLkHkMErPVtu06KD9925BTpWQhMT37ka'
-    url = 'https://mp.iuynfg.com/app/trip/rx-trip-ticket/pages/detail?_fli_newpage=1&un_flutter=true&flutter_path=%2Fpoi_detail_page&_fli_unify=false&titleBarHidden=2&disableNav=YES&poiId=97&fsharettid=fliggysharesend.0000&__password=%EF%BF%A5IdYY2UUkbjb%EF%BF%A5&shareId=weixin_friend_card&_projVer=1.27.19'
+    url = 'https://www.xiaohongshu.com/discovery/item/624233900000000001027fca?share_from_user_hidden=2du40DfRyZIPGQq1mUeXtrue&xhsshare=lKqNyjh5W9bncZmXTGpdWeixinSession&appuid=FsBiYqglAPoXkctOpD345a07b18711be103e932d89dd&apptime=V6akghYCo03tjJEu7f2q1648524076'
     short_str = sel_get(url, 'files/short.jpg')
     print(short_str)
     # write(os.path.join(os.getcwd(), 'tmp', 'sel_short.html'), short_str)

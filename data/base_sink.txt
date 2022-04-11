@@ -1,5 +1,5 @@
-# app: tv.danmaku.bili
-app: com.sankuai.meituan
+app: tv.danmaku.bili
+# app: com.sankuai.meituan
 <javax.servlet.ServletRequest: java.lang.String getParameter(java.lang.String)> -> _SOURCE_
 <javax.persistence.EntityManager: javax.persistence.TypedQuery createQuery(java.lang.String,java.lang.Class)> -> _SINK_
 <javax.servlet.http.HttpServletResponse: void sendRedirect(java.lang.String)> -> _SINK_

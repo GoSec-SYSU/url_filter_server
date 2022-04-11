@@ -11,6 +11,9 @@ redis_confi:
   port: 12698
   db: 0
 
+# 随机生成的参数的值的长度
+random_parameter_val_len: 20
+
 # 代码相似度阈值
 code_threshold: 0.90
 # 截屏相似度阈值
