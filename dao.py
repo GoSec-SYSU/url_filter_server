@@ -77,7 +77,7 @@ class mysql:
             self.cursor = self.conn.cursor(pymysql.cursors.DictCursor)
             self.cursor.execute("set names utf8")  # utf8 字符集
             result = self.cursor.execute(sql)
-            print(sql)
+            # print(sql)
             self.conn.commit()
             self.cursor.close()
             return (True, result)
